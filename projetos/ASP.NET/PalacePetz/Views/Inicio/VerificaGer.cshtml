@@ -1,0 +1,129 @@
+﻿@model AppBancoDominio.Gerente
+@{
+    ViewBag.Title = "VerificaGer";
+    Layout = "~/Views/Shared/_PalacePetz.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VerificaGer</title>
+    <style>
+        section {
+            margin-left: 5%;
+            display: inline-flex;
+        }
+        .text-danger {
+            color: red;
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            margin-top: 10px;
+            margin-bottom: 2px;
+            margin-left: 28%;
+            font-style: italic;
+        }
+        form {
+            background-color: white;
+            display: block;
+            width: 70vw;
+            height: 60vh;
+            margin-top: 10%;
+            margin-left: 30%;
+        }
+
+        h2 {
+            text-align: center;
+            display: inline-flex;
+            margin-top: 8%;
+            margin-left: 21%;
+            font: bold 15pt;
+        }
+
+        .senha {
+            font: bold 12pt sans-serif;
+            display: block;
+            margin: 10% 28%;
+            margin-bottom: 1%;
+            background: none;
+            width: 25vw;
+            border: none;
+            border-bottom: solid 3px #00aeff;
+            outline: none;
+        }
+
+        .senha:hover {
+            background: #E1E8ED;
+        }
+
+        .btn_ent {
+            border: none;
+            text-align: center;
+            display: block;
+            margin-top: 8%;
+            margin-left: 35%;
+            text-decoration: none;
+            padding: 10px;
+            width: 50%;
+            max-width: 200px;
+            background: #677eff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.5s;
+        }
+
+        .btn_ent:hover {
+            text-decoration: none;
+            background: #88d9de;
+            color: black;
+            font-style: normal;
+        }
+
+        .limpar {
+            visibility: hidden;
+            outline: none;
+            display: block;
+            margin-top: 2%;
+            margin-left: 23.5%;
+            text-decoration: none;
+            padding: 10px;
+            max-width: 100px;
+            background: none;
+            border: none;
+            color: #677eff;
+            cursor: pointer;
+            font: bold 12pt sans-serif;
+            transition: 0.5s;
+        }
+
+        .limpar:hover {
+            text-decoration: solid underline #171720;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <form>
+                <div class="form-horizontal">
+                    <h2>Insira sua senha de Gerente</h2>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.PasswordFor(model => model.senha_ger, new { @class = "senha"})
+                        @Html.ValidationMessageFor(model => model.senha_ger, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                    <input type="submit" value="Entrar" class="btn_ent" />
+                </div>
+            </form>
+        }
+    </section>
+@Scripts.Render("~/bundles/Limpar")
+</body>
+</html>

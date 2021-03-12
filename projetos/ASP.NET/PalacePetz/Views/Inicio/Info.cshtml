@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações - Palace Petz</title>
+    <style>
+        section{
+            margin-top: 4%;
+            display: inline-flex;
+        }
+        .container {
+            background-color: #00aeff;
+            margin: 4% 20%;
+            border-radius: 4px;
+            padding: 5%;
+            width: 1000px;
+            height: 500px;
+            display: inline-flex;
+            justify-content: space-around;
+        }
+
+        .container .box {
+            position: relative;
+            width: 400px;
+            background: #fff;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            border-radius: 4px;
+            text-align: center;
+            margin-left: 2%;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        .container .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+        }
+        h2 {
+            margin: 4% 4%;
+            font: bold 18pt Arial;
+            text-align: center;
+            color: #171720;
+        }
+        h4 {
+            margin: 15% 4%;
+            font: normal 14pt Arial;
+            text-align: center;
+            color: #171720;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="box">
+                <i class="fa fa-users" style="line-height: 100px; font-size: 50px; color: #00aeff"></i>
+                <h2>Quem Somos Nós?</h2>
+                <h4>A Palace Petz foi criada pelo amor que os proprietários têm pelos animais.
+                Visando um bom tratamento aos bichinhos de estimação, não só com produtos, mas
+                auxiliando no cuidado fornecendo consultas veterinárias.</h4>
+            </div>
+            <div class="box">
+                <i class="fa fa-pencil-square-o" style=" line-height: 100px; font-size: 50px; color: #00aeff"></i>
+                <h2>Missão e Visão</h2>
+                <h4>Pensando no que o seu bichinho de estimação precisa, com a melhor forma, que é com amor e carinho.</h4>
+            </div>
+            <div class="box">
+                <i class="fa fa-star" style=" line-height: 100px; font-size: 50px; color: #00aeff"></i>
+                <h2>Valores</h2>
+                <h4>A satisfação da Palace é oferecer produtos de ótima qualidade que atenda desde os mimos até a necessidade
+                mais importante de nossos Petz.</h4>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

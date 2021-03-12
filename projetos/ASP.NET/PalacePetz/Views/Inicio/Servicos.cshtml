@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            margin-left: 13%;
+        }
+        .tit {
+            padding-top: 2%;
+            margin-left: 38%;
+            font-size: 40px;
+        }
+        .cards{
+            display: inline-flex;
+        }
+        .box {
+            background: #171720;
+            margin: 5% 5%;
+            width: 38%;
+            height: 70vh;
+            border-radius: 15px;
+            transition: 0.5s;
+        }
+        .box img{
+            margin: 5% 25%;
+            width: 50%;
+        }
+        .box h2{
+            color: #fff;
+            text-align: center;
+        }
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+        }
+        .btn_cards {
+            display: inline-flex;
+            background: #171720;
+            margin-top: 5%;
+            width: 100%;
+            height: 50px;
+            border-radius: 15px;
+            padding: 8px;
+            transition: 0.5s;
+        }
+        .btn_agenda {
+            background: #00aeff;
+            text-transform: uppercase;
+            border-radius: 10px;
+            text-decoration: none;
+            padding: 50px;
+            margin-top: 8%;
+            padding-top: 5%;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            font-size: 21px;
+            transition: 0.5s;
+        }
+        .btn_agenda:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="tit">Serviços</div>
+        <div class="cards">
+            <div class="box">
+                <img src="~/fonts/serv_consulta.png">
+                <h2>Consulta Veterinária</h2>
+                <h2 style="font-size: 15pt">Preço Fixo: R$90,00</h2>
+                <div class="btn_cards">
+                    @Html.ActionLink("Agendar Consulta", "CadastrarConsul", "Inicio", new { @class = "btn_agenda" })
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/fonts/serv_banho.png">
+                <h2>Banho e Tosa</h2>
+                <h2 style="font-size: 15pt">A partir de: R$60,00</h2>
+                <div class="btn_cards">
+                    @Html.ActionLink("Agendar Banho e Tosa", "CadastrarBanhoTosa", "Inicio", new { @class = "btn_agenda" })
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

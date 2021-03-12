@@ -1,0 +1,132 @@
+﻿@model AppBancoDominio.Cliente
+<style>
+    .back {
+        width: 100%;
+        text-decoration: underline;
+        margin-left: 13%;
+        padding-right: 15%;
+        margin-top: 18%;
+        font: bold 10pt sans-serif;
+        color: black;
+    }
+
+    .container {
+        margin-left: 25%;
+        display: inline-flex;
+        background-color: white;
+        margin-top: 1%;
+        width: 50%;
+    }
+
+    .dl-horizontal {
+        margin-left: 10%;
+        margin-top: 8%;
+        width: 120%;
+    }
+
+    dt {
+        width: 10%;
+        margin-bottom: 5%;
+        padding-right: 30%;
+        font: bold 5sp sans-serif;
+    }
+
+    dd {
+        margin-left: 15%;
+        width: 78%;
+    }
+
+    h2 {
+        margin-top: -2%;
+        margin-bottom: 8%;
+        margin-left: -80%;
+        text-align: center;
+        font: bold 18pt sans-serif;
+    }
+
+    h3 {
+        display: inline-flex;
+        margin-left: 30%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font: bold 20pt sans-serif;
+    }
+
+    .btn_exc {
+        text-transform: uppercase;
+        text-align: center;
+        border: none;
+        padding: 10px;
+        text-decoration: none;
+        background: #677eff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.5s;
+    }
+
+        .btn_exc:hover {
+            background: #88d9de;
+            color: black;
+            font: bold;
+        }
+</style>
+
+<h3>Você quer mesmo deletar esse Cliente?</h3>
+<div class="container">
+    <dl class="dl-horizontal">
+        <h2>Excluir Cliente</h2>
+        <dt>
+            @Html.DisplayNameFor(model => model.id_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_cli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cpf_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpf_cli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_cli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.end_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.end_cli)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.comple_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comple_cli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tel_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel_cli)
+        </dd>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ActionLink(" - Voltar para Lista", "ClientesCadastrados", "Index", new { @class = "back" })
+            <input type="submit" value="Excluir" class="btn_exc" />
+        }
+    </dl>
+</div>

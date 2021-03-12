@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema - Palace Petz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" />
+    <link href="~/Assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Css/sb-admin-2.css" rel="stylesheet" />
+    <link href="~/Assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Assets/jquery/jquery.min.js"></script>
+    <script src="~/Assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Js/sb-admin-2.js"></script>
+    <script src="~/Assets/metisMenu/metisMenu.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #88d9de;
+        }
+
+        .navigation {
+            z-index: 6000;
+            position: fixed;
+            width: 60px;
+            height: 100%;
+            background: #171720;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+
+            .navigation:hover, .navigation.active {
+                width: 300px;
+                z-index:6000;
+            }
+
+            .navigation ul {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+
+                .navigation ul li {
+                    position: relative;
+                    width: 100%;
+                    list-style: none;
+                }
+
+                    .navigation ul li:hover {
+                        background: #00aeff;
+                    }
+
+            .navigation ul li a {
+                position: relative;
+                display: block;
+                width: 100%;
+                display: flex;
+                text-decoration: none;
+                color: #fff;
+            }
+
+                .navigation ul li a .icon {
+                    position: relative;
+                    display: block;
+                    min-width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+                }
+
+                    .navigation ul li a .icon .fa {
+                        font-size: 24px;
+                    }
+
+                .navigation ul li a .title {
+                    position: relative;
+                    display: block;
+                    padding: 0 10px;
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: start;
+                    white-space: nowrap;
+                }
+
+        .toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background-color: #171720;
+            cursor: pointer;
+        }
+
+            .toggle.active {
+                background-color: #00aeff;
+            }
+
+            .toggle:before {
+                content: '\f0c9';
+                font-family: fontAwesome;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                line-height: 60px;
+                text-align: center;
+                font-size: 24px;
+                color: #fff;
+            }
+
+            .toggle.active:before {
+                content: '\f00d';
+            }
+
+        media(max-width:767px) {
+            .navigation
+
+        {
+            left: -60px;
+        }
+
+        .navigation.acitve {
+            left: 0px;
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+<body onload="time">
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="Index">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="VerificaGer">
+                    <span class="icon"><i class="fa fa-id-card-o" aria-hidden="true"></i></span>
+                    <span class="title">Funcionários</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="ClientesCadastrados">
+                    <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                    <span class="title">Consultar Clientes</span>
+                </a>
+            </li>
+            <li>
+                <a href="CadastrarCli">
+                    <span class="icon"><i class="fa fa-user-plus" aria-hidden="true"></i></span>
+                    <span class="title">Novo Cliente</span>
+                </a>
+            </li>
+            <li>
+                <a href="CadastrarProd">
+                    <span class="icon"><i class="fa fa-inbox" aria-hidden="true"></i></span>
+                    <span class="title">Produtos</span>
+                </a>
+            </li>
+            <li>
+                <a href="VendaProd">
+                    <span class="icon"><i class="fa fa-money" aria-hidden="true"></i></span>
+                    <span class="title">Vendas</span>
+                </a>
+            </li>
+            <li>
+                <a href="RelatorioVen">
+                    <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                    <span class="title">Relatório de Vendas</span>
+                </a>
+            </li>
+            <li>
+                <a href="Servicos">
+                    <span class="icon"><i class=" fa fa-suitcase" aria-hidden="true"></i></span>
+                    <span class="title">Serviços</span><span class="fa arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="Info">
+                    <span class="icon"><i class=" fa fa-info-circle" aria-hidden="true"></i></span>
+                    <span class="title">Informações</span><span class="fa arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="Ajuda">
+                    <span class="icon"><i class=" fa fa-question" aria-hidden="true"></i></span>
+                    <span class="title">Ajuda</span><span class="fa arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="Login">
+                    <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                    <span class="title">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <script type="text/javascript">
+        function toggleMenu() {
+            var navigation = document.querySelector('.navigation');
+            var toggle = document.querySelector('.toggle');
+            navigation.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+    @RenderBody()
+    @Scripts.Render("~/bundles/inputmask")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

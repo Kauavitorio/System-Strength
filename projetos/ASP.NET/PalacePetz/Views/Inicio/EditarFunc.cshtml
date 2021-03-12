@@ -1,0 +1,160 @@
+﻿@model AppBancoDominio.Funcionario
+
+<style>
+    .back {
+        text-decoration: underline;
+        margin-left: 10%;
+        font: bold 10pt sans-serif;
+        color: black;
+    }
+
+    section {
+        margin-left: 18%;
+        display: inline-flex;
+    }
+
+    h2 {
+        text-align: center;
+        display: inline-flex;
+        margin-left: 25%;
+        font: bold 15pt;
+        margin-bottom: 2%;
+    }
+
+    .form-horizontal {
+        border-radius: 5px;
+        padding-top: 2%;
+        padding-left: 10%;
+        background-color: white;
+        display: block;
+        width: 70vw;
+        height: 90vh;
+        margin-top: 4%;
+    }
+
+    .label2 {
+        width: 30%;
+        margin: 0% 10%;
+        display: flex;
+        margin-right: -15%;
+        font: bold 12pt sans-serif;
+    }
+
+    .form-group {
+        margin-top: 4.2%;
+        margin-left: 5%;
+        display: flex;
+    }
+
+    .editor {
+        font: italic 12pt sans-serif;
+        display: flex;
+        background: none;
+        width: 20vw;
+        border: none;
+        border-bottom: solid 3px #000;
+        outline: none;
+    }
+
+    .cracha {
+        display: flex;
+        width: 50%;
+        margin-top: -50%;
+        margin-left: 45%;
+    }
+
+    .btn_edit {
+        text-transform: uppercase;
+        display: block;
+        border: none;
+        margin-top: 2%;
+        margin-left: 18%;
+        text-decoration: none;
+        padding: 10px;
+        width: 50%;
+        max-width: 200px;
+        background: #677eff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.5s;
+    }
+
+        .btn_edit:hover {
+            background: #88d9de;
+            color: black;
+            font: bold;
+        }
+</style>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<section>
+    <div class="form-horizontal">
+        <h2>Editar Funcionário</h2>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.id_func, new { htmlAttributes = new { @class = "editor" } })
+                @Html.ValidationMessageFor(model => model.id_func, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nm_func, new { htmlAttributes = new { @class = "editor" } })
+                @Html.ValidationMessageFor(model => model.nm_func, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cpf_func, new { htmlAttributes = new { @class = "editor" } })
+                @Html.ValidationMessageFor(model => model.cpf_func, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cg_func, new { htmlAttributes = new { @class = "editor" } })
+                @Html.ValidationMessageFor(model => model.cg_func, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.end_func, new { htmlAttributes = new { @class = "editor" } })
+                @Html.ValidationMessageFor(model => model.end_func, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tel_func, new { htmlAttributes = new { @class = "editor" } })
+                @Html.ValidationMessageFor(model => model.tel_func, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Editar" class="btn_edit" />
+            </div>
+        </div>
+        <img src="~/fonts/cracha_func.png" class="cracha">
+        @Html.ActionLink(" - Voltar para Lista", "FuncCadastrados",  new { @class="back"})
+    </div>
+</section>   
+}
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#cpf_func").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
+        })
+        $(document).ready(function () {
+            $("#tel_func").inputmask("mask", { "mask": "(99)9999-99999" });
+        })
+    </script>
+}

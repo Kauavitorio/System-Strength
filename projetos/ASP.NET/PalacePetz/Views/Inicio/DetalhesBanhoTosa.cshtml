@@ -1,0 +1,149 @@
+﻿@model AppBancoDominio.BanhoTosa
+<style>
+    .back {
+        width: 100%;
+        text-decoration: underline;
+        margin-left: 13%;
+        padding-right: 15%;
+        margin-top: 18%;
+        font: bold 10pt sans-serif;
+        color: black;
+    }
+
+    .container {
+        margin-left: 22%;
+        display: inline-flex;
+        background-color: white;
+        margin-top: 1%;
+        width: 55%;
+    }
+
+    .dl-horizontal {
+        margin-top: 10%;
+        width: 120%;
+    }
+
+    dt {
+        width: 10%;
+        margin-bottom: 5%;
+        padding-right: 30%;
+        font: bold 5sp sans-serif;
+    }
+
+    dd {
+        margin-left: 5%;
+        width: 78%;
+    }
+
+    h2 {
+        margin-left: 5%;
+        height: 60px;
+        text-align: center;
+        font: bold 18pt sans-serif;
+    }
+
+    .btn_edit {
+        text-transform: uppercase;
+        text-align: center;
+        border: none;
+        padding: 10px;
+        text-decoration: none;
+        background: #677eff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.5s;
+    }
+
+        .btn_edit:hover {
+            background: #88d9de;
+            color: black;
+            font: bold;
+        }
+</style>
+<div class="container">
+    <h2>Detalhes</h2>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cd_Animal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cd_Animal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.raca_animal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.raca_animal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_cli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cpf_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpf_cli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.end_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.end_cli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tel_cli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel_cli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nm_func)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nm_func)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dt_serv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dt_serv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hr_serv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hr_serv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.forma_paga)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.forma_paga)
+        </dd>
+        @Html.ActionLink("Voltar para Lista", "BanhoTosaCadastrados", "Inicio", new { @class = "back" })
+        @Html.ActionLink("Editar", "EditarBanhoTosa", new { id = Model.cd_Animal }, new { @class = "btn_edit" })
+    </dl>
+</div>

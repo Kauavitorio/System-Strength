@@ -1,0 +1,110 @@
+﻿@model IEnumerable<AppBancoDominio.Funcionario>
+
+@{
+    ViewBag.Title = "FuncCadastrados";
+    Layout = "~/Views/Shared/_PalacePetz.cshtml";
+}
+<style>
+    .novoFunc {
+        text-decoration: underline;
+        margin-left: 10%;
+        font: bold 12pt sans-serif;
+        color: black;
+    }
+    h2 {
+        width: 50vw;
+        display: inline-flex;
+        margin-left: 35%;
+        font: bold 25pt sans-serif;
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+    section {
+        margin-top: 5%;
+        margin-left: 0%;
+        padding-right: 10%;
+    }
+    table {
+        box-shadow: 4px 5px 5px #004a6b;
+        border: solid 2px #171720;
+        display: flex;
+        margin-left: 7%;
+        background-color: rgba(255, 255, 255, 0.75);
+        color: #000;
+    }
+
+    th {
+        text-align: center;
+        border: solid 2px #171720;
+        border-left: none;
+        font: bold 1em sans-serif;
+    }
+    td {
+        text-align: center;
+        border: solid 2px #171720;
+        border-left: none;
+        font: normal 1em sans-serif;
+    }
+    .op{
+        border-right: none;
+    }
+</style>
+    <h2>Funcionários Cadastrados</h2>
+    <p>@Html.ActionLink(" - Cadastrar novo Funcionário", "CadastrarFunc", "Inicio", new { @class = "novoFunc" })</p>
+    <section>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.id_func)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cpf_func)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.nm_func)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cg_func)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.end_func)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.tel_func)
+                </th>
+                <th class="op">
+                    Opções:
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id_func)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cpf_func)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nm_func)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cg_func)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.end_func)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tel_func)
+                    </td>
+                    <td class="op">
+                        @Html.ActionLink("Editar", "EditarFunc", new {id= item.id_func}) |
+                        @Html.ActionLink("Detalhes", "DetalhesFunc", new { id=item.id_func }) |
+                        @Html.ActionLink("Excluir", "ExcluirFunc", new { id=item.id_func })
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </section>    

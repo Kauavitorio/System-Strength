@@ -1,0 +1,150 @@
+﻿@model AppBancoDominio.Produto
+
+<style>
+    .back {
+        text-decoration: underline;
+        margin-left: 10%;
+        font: bold 10pt sans-serif;
+        color: black;
+    }
+
+    section {
+        margin-left: 18%;
+        display: inline-flex;
+    }
+
+    h2 {
+        text-align: center;
+        display: inline-flex;
+        margin-left: 25%;
+        font: bold 15pt;
+        margin-bottom: 2%;
+    }
+
+    .form-horizontal {
+        border-radius: 5px;
+        padding-top: 2%;
+        padding-left: 10%;
+        background-color: white;
+        display: block;
+        width: 70vw;
+        height: 90vh;
+        margin-top: 4%;
+    }
+
+    .label2 {
+        width: 30%;
+        margin: 0% 10%;
+        display: flex;
+        margin-right: -15%;
+        font: bold 12pt sans-serif;
+    }
+
+    .form-group {
+        margin-top: 4.2%;
+        margin-left: 5%;
+        display: flex;
+    }
+
+    .editor {
+        font: italic 12pt sans-serif;
+        display: flex;
+        background: none;
+        width: 20vw;
+        border: none;
+        border-bottom: solid 3px #000;
+        outline: none;
+    }
+
+    .cracha {
+        display: flex;
+        width: 50%;
+        margin-top: -55%;
+        margin-left: 45%;
+    }
+
+    .btn_edit {
+        text-transform: uppercase;
+        display: block;
+        border: none;
+        margin-top: 6%;
+        margin-left: 18%;
+        text-decoration: none;
+        padding: 10px;
+        width: 50%;
+        max-width: 200px;
+        background: #677eff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.5s;
+    }
+
+        .btn_edit:hover {
+            background: #88d9de;
+            color: black;
+            font: bold;
+        }
+</style>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section>
+        <div class="form-horizontal">
+            <h2>Produto</h2>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.id_prod, new { htmlAttributes = new { @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.id_prod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.nm_prod, new { htmlAttributes = new { @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.nm_prod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.qntd_prod, new { htmlAttributes = new { @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.qntd_prod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.cat_prod, new { htmlAttributes = new { @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.cat_prod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.preco_prod, new { htmlAttributes = new { @class = "editor" } })
+                    <h7 style="font-style: italic; font-size: 10pt;">Obs. Digite apenas números....</h7>
+                    @Html.ValidationMessageFor(model => model.preco_prod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.data_prod, new { htmlAttributes = new { @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.data_prod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Editar" class="btn_edit" />
+                </div>
+            </div>
+            <img src="~/fonts/cracha_prod.png" class="cracha">
+            @Html.ActionLink(" - Voltar para Lista", "ProdCadastrados", new { @class = "back" })
+        </div>
+    </section>
+}
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#data_prod").inputmask("mask", { "mask": "99/99/9999" }, { reverse: true });
+        })
+    </script>
+}
