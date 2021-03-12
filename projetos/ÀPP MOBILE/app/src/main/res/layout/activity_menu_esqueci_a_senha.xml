@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientcreateaccount"
+    tools:context=".MenuEsqueciASenhaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <!--Base for all thinks-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ScrollViewSize">
+
+                <TextView
+                    android:id="@+id/txteita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/eita"
+                    android:textColor="#fff"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txteserio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eserio"
+                    android:textColor="#fff"
+                    android:textSize="19sp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txteita" />
+
+                <TextView
+                    android:id="@+id/txtnaosepreocupe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/naosepreoocupe"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txteserio" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewlinha"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="#fff"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtnaosepreocupe" />
+
+                <TextView
+                    android:id="@+id/txtprotocolo"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/avisoprotocolo"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtnaosepreocupe"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txtcontatoprotoculo"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/entraremcontato"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:layout_marginTop="2dp"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtprotocolo" />
+
+
+                <ProgressBar
+                    android:id="@+id/progressminiloadingprotocolo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:indeterminateDrawable="@drawable/cpb_3"
+                    android:indeterminateDuration="@android:integer/config_longAnimTime"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardViewlinha" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

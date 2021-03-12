@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="355dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_height="500dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="20dp"
+            android:background="@drawable/detalhespersonalizado"
+            android:layout_height="match_parent">
+
+            <!--Tittle-->
+            <TextView
+                android:id="@+id/txttitulodetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detalhes"
+                android:textColor="#fff"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--Tittle Client-->
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/txttitulocliente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:lottie_rawRes="@raw/avatar3"
+                app:lottie_autoPlay="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttitulodetalhes"/>
+
+            <!--Text Name Client-->
+            <TextView
+                android:id="@+id/txtnomeclientedetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nomedocliente"
+                android:textColor="#fff"
+                android:layout_marginStart="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toEndOf="@+id/txttitulocliente"
+                app:layout_constraintTop_toBottomOf="@+id/txttitulodetalhes" />
+
+            <!--Tittle CNPJ-->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/txttitulocnpj"
+                android:layout_width="40dp"
+                app:lottie_autoPlay="true"
+                android:layout_marginTop="8dp"
+                app:lottie_rawRes="@raw/houseouapartment"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttitulocliente"/>
+
+             <!--Text CNPJ Client-->
+            <TextView
+                android:id="@+id/txtcnpjclientedetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cnpjedocliente"
+                android:textColor="#fff"
+                android:layout_marginStart="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"
+                app:layout_constraintStart_toEndOf="@+id/txttitulocnpj"
+                app:layout_constraintTop_toBottomOf="@+id/txtnomeclientedetalhes" />
+
+            <!--Tittle DATA-->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/txttitulodata"
+                android:layout_width="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/calender2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttitulocnpj"/>
+
+            <!--Text DATA-->
+            <TextView
+                android:id="@+id/txtdatadetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dataagenda"
+                android:textColor="#fff"
+                android:layout_marginStart="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="14dp"
+                app:layout_constraintStart_toEndOf="@+id/txttitulodata"
+                app:layout_constraintTop_toBottomOf="@+id/txtcnpjclientedetalhes" />
+
+            <!--Tittle HOUR-->
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/txttitulohour"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="5dp"
+                app:lottie_rawRes="@raw/clock"
+                app:lottie_autoPlay="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttitulodata"/>
+
+            <!--<TextView
+                android:id="@+id/txttitulohour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/horaagenda"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttitulodata" />-->
+
+            <!--Text HOUR-->
+            <TextView
+                android:id="@+id/txthourdetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/horaatual"
+                android:layout_marginStart="5dp"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="9dp"
+                app:layout_constraintStart_toEndOf="@+id/txttitulodata"
+                app:layout_constraintTop_toBottomOf="@+id/txtdatadetalhes" />
+
+            <!--Tittle LOCAL-->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/txttitulolocal"
+                android:layout_width="30dp"
+                android:layout_marginTop="8dp"
+                app:lottie_rawRes="@raw/location2"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                app:lottie_autoPlay="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttitulohour"/>
+
+            <!--Text LOCAL-->
+            <TextView
+                android:id="@+id/txtlocaldetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/localagenda"
+                android:layout_marginStart="5dp"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"
+                app:layout_constraintStart_toEndOf="@+id/txttitulolocal"
+                app:layout_constraintTop_toBottomOf="@+id/txthourdetalhes" />
+
+            <!--Tittle DESC-->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/txttitulodesc"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                app:lottie_rawRes="@raw/msg"
+                app:lottie_autoPlay="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttitulolocal"/>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="135dp"
+                android:padding="10dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/outline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttitulodesc">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="UselessParent">
+
+                    <!--Text DESC-->
+                    <TextView
+                        android:id="@+id/txtdescdetalhes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descagenda"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                </ScrollView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/btnclosedetalhes"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_rawRes="@raw/close"
+                app:lottie_autoPlay="true"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

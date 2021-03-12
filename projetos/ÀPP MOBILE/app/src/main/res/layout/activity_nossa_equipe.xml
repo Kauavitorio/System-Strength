@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".NossaEquipeActivity">
+
+    <!--Cabeçario-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenderpalacesystem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--Imagem System-->
+            <ImageView
+                android:id="@+id/imglogosystem"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/logosystemstrengthsemfundo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <!--Btn Voltar-->
+            <LinearLayout
+                android:id="@+id/linearbtnvoltarnossaequipe"
+                android:layout_width="60dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_rawRes="@raw/setinhaesquerda" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbarSize="10dp"
+        android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--CardView Danilo-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewdanilo"
+                    android:layout_width="300dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_height="590dp"
+                    app:cardBackgroundColor="#fff"
+                    android:visibility="visible"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <!--Texto Titulo Nome Danilo-->
+                        <TextView
+                            android:id="@+id/txttitulodanilo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/danilo"
+                            android:textColor="#000"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--Imagem Danilo-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewimgdanilo"
+                            android:layout_width="250dp"
+                            android:layout_height="250dp"
+                            app:cardBackgroundColor="#fff"
+                            android:layout_marginTop="16dp"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttitulodanilo">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:importantForAutofill="auto"
+                                    android:src="@drawable/fotodanilo"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="ContentDescription"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Texto Cargo-->
+                        <TextView
+                            android:id="@+id/txtcargodanilo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/cargodanilo"
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardviewimgdanilo"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <!--Sobre Danilo-->
+                        <TextView
+                            android:id="@+id/txtsobredanilo"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/sobredanilo"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtcargodanilo"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <!--CardView Btn Instagram-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewinstadanilo"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:layout_marginStart="32dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobredanilo">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardView4"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do insta-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        tools:ignore="TooDeepLayout">
+
+                                        <!--Img Insta-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="80dp"
+                                            android:layout_height="50dp"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/instagram" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--CardView Btn GitHub-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtngithubdanilo"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cardviewbtntwitterdanilo"
+                            app:layout_constraintStart_toEndOf="@+id/cardviewinstadanilo"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobredanilo">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardviewbasegithubdanilo"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do GitHub-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img GitHub-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/github" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--CardView Btn Twitter-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtntwitterdanilo"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:layout_marginEnd="32dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobredanilo">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardviewbasetwitterdanilo"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do insta-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img Twitter-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="40dp"
+                                            android:layout_height="50dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/twitter3" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--CardView Kauã-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewkaua"
+                    android:layout_width="300dp"
+                    android:layout_height="590dp"
+                    android:layout_marginTop="24dp"
+                    app:cardBackgroundColor="#fff"
+                    android:visibility="visible"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardviewdanilo">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <!--Texto Titulo Nome Kaua-->
+                        <TextView
+                            android:id="@+id/txttitulokaua"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/kaua"
+                            android:textColor="#000"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--Imagem Kauã-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewimgkaua"
+                            android:layout_width="250dp"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="16dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardBackgroundColor="#fff"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttitulokaua">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:importantForAutofill="auto"
+                                    android:src="@drawable/fotokaua"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="ContentDescription"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Texto Cargo-->
+                        <TextView
+                            android:id="@+id/txtcargokaua"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/cargokaua"
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardviewimgkaua"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <!--Sobre Kauã-->
+                        <TextView
+                            android:id="@+id/txtsobrekaua"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/sobrekaua"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtcargokaua"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <!--CardView Btn Instagram-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewinstakaua"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:layout_marginStart="32dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobrekaua">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do insta-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img Insta-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="80dp"
+                                            android:layout_height="50dp"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/instagram" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--CardView Btn GitHub-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtngithubkaua"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cardviewbtntwitterkaua"
+                            app:layout_constraintStart_toEndOf="@+id/cardViewinstakaua"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobrekaua">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardviewbasegithubkaua"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do insta-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img GitHub-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/github" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--CardView Btn Twitter-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtntwitterkaua"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:layout_marginEnd="32dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobrekaua">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardviewbasetwitterkaua"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do Twitter-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img Twitter-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="40dp"
+                                            android:layout_height="50dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/twitter3" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--CardView Matheus-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewmathues"
+                    android:layout_width="300dp"
+                    android:layout_height="590dp"
+                    android:layout_marginTop="24dp"
+                    app:cardCornerRadius="30dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#fff"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardviewkaua">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <!--Texto Titulo Nome Kaua-->
+                        <TextView
+                            android:id="@+id/txttitulomatheus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/matheus"
+                            android:textColor="#000"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--Imagem Matheus-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewimgmatheus"
+                            android:layout_width="250dp"
+                            android:layout_height="250dp"
+                            app:cardBackgroundColor="#fff"
+                            android:layout_marginTop="16dp"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttitulomatheus">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:importantForAutofill="auto"
+                                    android:src="@drawable/fotomathues"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="ContentDescription"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Texto Cargo-->
+                        <TextView
+                            android:id="@+id/txtcargomatheus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/cargomatheus"
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardviewimgmatheus"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <!--Sobre Matheus-->
+                        <TextView
+                            android:id="@+id/txtsobrematheus"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/sobrematheus"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtcargomatheus"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <!--CardView Btn Instagram-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewinstamatheus"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:layout_marginStart="32dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobrematheus">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do insta-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img Insta-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="80dp"
+                                            android:layout_height="50dp"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/instagram" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--CardView Btn GitHub-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtngithubmatheus"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cardviewbtntwittermatheus"
+                            app:layout_constraintStart_toEndOf="@+id/cardViewinstamatheus"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobrematheus">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do insta-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img GitHub-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/github" />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--CardView Btn Twitter-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtntwittermatheus"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:layout_marginEnd="32dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobrematheus">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TooManyViews">
+
+                                    <!--Base para imagem do Twitter-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img Twitter-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="40dp"
+                                            android:layout_height="50dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/twitter3" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--CardView Pedro-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewpedro"
+                    android:layout_width="300dp"
+                    android:layout_height="590dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="32dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardviewmathues"
+                    tools:ignore="TooManyViews">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <!--Texto Titulo Nome Pedro-->
+                        <TextView
+                            android:id="@+id/txttitulopedro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/pedro"
+                            android:textColor="#000"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--Imagem Pedro-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewimgpedro"
+                            android:layout_width="250dp"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="16dp"
+                            app:cardBackgroundColor="#fff"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttitulopedro">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:importantForAutofill="auto"
+                                    android:src="@drawable/fotopedro"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="ContentDescription"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Texto Cargo-->
+                        <TextView
+                            android:id="@+id/txtcargopedro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/cargomatheus"
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardviewimgpedro"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <!--Sobre Pedro-->
+                        <TextView
+                            android:id="@+id/txtsobrepedro"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/sobrepedro"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtcargopedro"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <!--CardView Btn Instagram-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewinstapedro"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:layout_marginStart="32dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobrepedro">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do insta-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img Insta-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="80dp"
+                                            android:layout_height="50dp"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/instagram" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--CardView Btn GitHub-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtngithubpedro"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cardviewbtntwitterpedro"
+                            app:layout_constraintStart_toEndOf="@+id/cardViewinstapedro"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobrepedro">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do github-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img GitHub-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/github" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--CardView Btn Twitter-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtntwitterpedro"
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:layout_marginEnd="32dp"
+                            android:outlineProvider="none"
+                            app:cardBackgroundColor="#BAE64607"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtsobrepedro">
+
+                            <!--Contener base geral-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    app:cardBackgroundColor="#fff"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <!--Base para imagem do Twitter-->
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Img Twitter-->
+                                        <com.airbnb.lottie.LottieAnimationView
+                                            android:layout_width="40dp"
+                                            android:layout_height="50dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:lottie_autoPlay="true"
+                                            app:lottie_rawRes="@raw/twitter3" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

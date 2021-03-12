@@ -1,0 +1,234 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">System Strength</string>
+    <string name="voltar">Voltar</string>
+    <string name="icomore">+</string>
+
+    <!--Navigation Bar-->
+    <string name="home">Home</string>
+    <string name="agenda">Agenda</string>
+    <string name="servicos">Serviços</string>
+    <string name="clientes">Clientes</string>
+
+    <!--Screen Login-->
+    <string name="descnamesystem">System Strength</string>
+    <string name="login">Login</string>
+    <string name="cpf">Cpf</string>
+    <string name="senha">Senha</string>
+    <string name="logaragora">LOGAR AGORA</string>
+    <string name="criarconta">Criar Conta</string>
+    <string name="esqueciasenha">Esqueci a Senha</string>
+    <string name="hinteditcpf"> Insira seu cpf</string>
+    <string name="hintusuario">Insira aqui seu nome de usuario</string>
+    <string name="hintsenha">Insira aqui sua senha</string>
+
+    <!--Screen Create Account-->
+    <string name="ola">Olá,</string>
+    <string name="criesuaconta">Crie sua conta para entrar</string>
+    <string name="hinteditnomefunc"> Insira seu nome</string>
+    <string name="hinteditemail"> Insira seu email</string>
+    <string name="hinteditsenha"> Insira uma senha</string>
+    <string name="hinteditend"> Insira seu endereço</string>
+    <string name="hintedittell"> Insira seu celular</string>
+    <string name="hinteditcargo"> Insira seu cargo</string>
+    <string name="nomefunccadastro">Nome*</string>
+    <string name="cpfcadastro">CPF*</string>
+    <string name="email">Email*</string>
+    <string name="cargocadastro">Cargo*</string>
+    <string name="tellcadastro">Celular (Opcional)</string>
+    <string name="enderecocadastro">Endereço (Opcional)</string>
+    <string name="senhacadas">Senha*</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="avisonomefunc">*Necessário ao menos 8 caracteres</string>
+    <string name="avisosenha">*Necessário ao menos 8 caracteres</string>
+    <string name="avisocpf">*Necessário 11 caracteres</string>
+
+    <!--Screen Forget my Password-->
+    <string name="naosepreoocupe">Não se preocupe podemos alterar ela para você</string>
+    <string name="eita">Eitaa..</string>
+    <string name="eserio">É serio que você esquecou sua senha?</string>
+    <string name="avisoprotocolo">De acordo com o protocolo de segurança, sua senha apenas podera ser alterada por um gerente da System Strength</string>
+    <string name="entraremcontato">Solicite a troca de senha com seu gerente</string>
+    <string name="contato">Contato</string>
+
+    <!--Tela Aviso Erro-->
+    <string name="ops">Opss.. :(</string>
+    <string name="naofoipossivelfazerseucadastro">Não foi possivel realizar o seu cadastro</string>
+    <string name="naofoipossivelconectaraobanco">Não foi possivel estabelecer conexão ao banco de dados de nossa empresa, e consequentimente não a possibilidade de geral sua nova conta</string>
+    <string name="contatenossaequipe">Contate nossa equipe para mais informações</string>
+
+    <!--Tela Principal-->
+    <string name="java">JAVA</string>
+    <string name="csharp">C#</string>
+    <string name="js">JAVASCRIPT</string>
+    <string name="html">HTML</string>
+    <string name="css">CSS</string>
+    <string name="seunome">Seu Nome</string>
+    <string name="bemvindo">Bem Vindo de volta :)</string>
+    <string name="tituloagenda">Agenda</string>
+    <string name="tituloclientes">Clientes</string>
+    <string name="saoagora">Agora são: </string>
+    <string name="horaatual">Hora atual</string>
+    <string name="cargoatual">Você é: </string>
+    <string name="mais">+</string>
+    <string name="cargo">Cargooo</string>
+    <string name="proximareuniao">Proxima reúnião: </string>
+    <string name="aquiestaaproximareuniao">Proxima reu as..</string>
+    <string name="vcpossui">Você possui: </string>
+    <string name="naohacompromissos">Não há compromissos\n cadastrados</string>
+    <string name="logout">Log Out</string>
+    <string name="maisinfo"><u>Mais Informações</u></string>
+    <string name="contatocomo" tools:ignore="TypographyEllipsis">• Telefone\n• Email\n• Endereço\n• Etc...</string>
+    <string name="funccapacitado">Funcionários Capacitados</string>
+    <string name="license"><u>Info</u></string>
+
+    <!--Tela Nossa Equipe-->
+
+    <!--Nomes Integrantes-->
+    <string name="danilo">Danilo Oliveira</string>
+    <string name="kaua">Kauã Vitório</string>
+    <string name="matheus">Matheus Souza</string>
+    <string name="pedro">Pedro Morato</string>
+
+    <!--Cargos-->
+    <string name="cargodanilo">Front-end Developer</string>
+    <string name="cargokaua">Mobile Developer</string>
+    <string name="cargomatheus">Back-end Developer</string>
+    <string name="cargppedro">Infrastructure Analyst</string>
+
+    <!--Sobre Integrante-->
+    <string name="sobredanilo">Olá! Me chamo Danilo Oliveira, tenho 17 anos e moro na capital de São Paulo. Estou cursando Desenvolvimento de Sistemas há 9 meses na escola Etec Prof. Basilides de Godoy, focando na área de front-end.</string>
+    <string name="sobrekaua">Olá! Me chamo Kauã Vitório, tenho 16 anos, moro atualmente em São Paulo Capital, curso técnico em Desenvolvimento de sistemas na ETEC. Atuo na área de Back-end de nossa empresa, a  System Strength.</string>
+    <string name="sobrematheus">Olá! Sou o Matheus Souza, tenho 17 anos, faço técnico em Desenvolvimento de sistemas na ETEC. Atuo na área de front-end e Back-end da nossa empresa, a  System Strength.</string>
+    <string name="sobrepedro">Olá meu nome é Pedro Henrique Morato Mesquita Ferreira, tenho 17 anos, moro em Santana de Parnaíba, curso Desenvolvimento de Sistemas na ETEC Professor Basilides de Godoy.</string>
+
+    <!--Perfil Usuario-->
+    <string name="nomefuncperfil">Nome do Usuário</string>
+    <string name="cpfperfil">cpf:</string>
+    <string name="adressperfil">Address do func aqui</string>
+    <string name="phoneperfil">Phone do func aqui</string>
+    <string name="emailperfil">Email do func aqui</string>
+    <string name="cargoperfil">Cargo do func aqui</string>
+    <string name="proximareuperfil">Proxima reunião aqui</string>
+    <string name="perfilcpfbase" tools:ignore="TypographyDashes">000.000.000-00</string>
+    <string name="editarperfil">Editar Perfil</string>
+    <string name="hintsenhaedit">Senha do usuario aqui</string>
+    <string name="adm">Gerenciar Usuarios</string>
+    <string name="nome">nome</string>
+    <string name="emailedit">email</string>
+    <string name="cargoedit">cargo</string>
+    <string name="hintproximareuniao">Quando será a proxima reunião?</string>
+    <string name="proximareuniaoedit">proxima reunião (HR:MN dd/mm/aa)</string>
+    <string name="salvar">Salvar</string>
+    <string name="voltaraocracha">Voltar ao Crachá</string>
+
+    <!--Gerenciamento de Usuário-->
+    <string name="gerenciamentodeusu">Gerenciamento de Usuario</string>
+    <string name="hintgerenciarbuscarcpf">INSIRA O CPF DO USUARIO</string>
+    <string name="voceestalogadocom">Você está logado com:</string>
+    <string name="aguardandocpf" tools:ignore="TypographyEllipsis">Aguardando CPF...</string>
+    <string name="hinteditcargogerenciar"> Insira o cargo do usuário</string>
+    <string name="hintedittellgerenciar"> Insira o celular do usuário</string>
+    <string name="hinteditendgerenciar"> Insira o endereço do usuário</string>
+    <string name="hinteditnomefuncgerenciar"> Insira o nome do usuário</string>
+    <string name="hinteditemailgerenciar"> Insira o email do usuário</string>
+    <string name="hinteditcpfgerenciar"> Insira o cpf do usuário</string>
+    <string name="listadeusuarios"><u>Lista de Usuários</u></string>
+
+    <!--Clients-->
+    <string name="cadastrarnovocliente"><u>Cadastrar novo Cliente</u></string>
+    <string name="nomedocliente">Insira o nome do cliente</string>
+    <string name="endereccliente">Endereço</string>
+    <string name="enderecodocliente">Insira o endereço do cliente</string>
+    <string name="phonecliente">Telefone</string>
+    <string name="phonedocliente">Insira o telefone do cliente</string>
+    <string name="cnpjcliente">CNPJ</string>
+    <string name="cnpjedocliente">Insira o CNPJ do cliente</string>
+    <string name="emailcliente">EMAIL</string>
+    <string name="emaildocliente">Insira o email do cliente</string>
+    <string name="editarcliente"><u>Editar Cliente</u></string>
+    <string name="naoaclientecadastrado">Não há nenhum cliente cadastrado</string>
+    <string name="naoaagendacadastrado">Não há nenhum compromisso agendado</string>
+
+
+    <!--Schedule-->
+    <string name="novoagendamento"><u>Novo Agendamento</u></string>
+    <string name="escolhercliente">Selecionar Cliente</string>
+    <string name="titulonovoagendamento">Novo Agendamento</string>
+    <string name="selecioneocliente">Selecione o cliente</string>
+    <string name="clientedoisponto">Cliente: </string>
+    <string name="cnpjdoisponto">CNPJ: </string>
+    <string name="dataagenda">DATA: </string>
+    <string name="hintdataagenda">Insira a data (00/00/0000)</string>
+    <string name="horaagenda">HORA: </string>
+    <string name="hinthoraagenda">Insira a hora (00:00)</string>
+    <string name="localagenda">LOCAL: </string>
+    <string name="hintlocalagenda">Insira o local</string>
+    <string name="descagenda">Descrição:</string>
+    <string name="hintdescagenda">Insira a descrição do agendamento</string>
+    <string name="selecionaroutrocliente"><u>Selecionar outro Cliente</u></string>
+    <string name="detalhes">Detalhes</string>
+    <string name="btnenderecodocliente"><u><i>Endereço do cliente</i></u></string>
+
+    <!--Services-->
+    <string name="nossosespecialistas">Nossos especialistas</string>
+    <string name="txtfuncsystem">Aqui você pode ver nossos funcionarios e seus respectivos cargos</string>
+    <string name="frontend">Front-End</string>
+    <string name="backend">Back-End</string>
+    <string name="analise">Análise</string>
+    <string name="infra">Infraestrutura</string>
+    <string name="txtbackend">O que é back-end?\nEssa forma de desenvolvimento se relaciona com o que está por trás das aplicações desenvolvidas na programação. Ou seja, tudo que dá estrutura e apoio às ações do usuário da máquina é chamado de back-end.\nQuando acessamos um site, por exemplo, por trás de toda sua apresentação amigável esteticamente, há uma comunicação das informações trocadas entre banco de dados e navegador. Portanto, por trás da interface gráfica do realizador, o back-end está sempre agindo.\nDiferenças entre back-end e front-end\nEnquanto os desenvolvimentos de front-end estão relacionados à área visual de aplicações, como design, forma da disposição de seções de texto e imagens, apresentação, linguagens HTML, CSS, cores e outros pontos; o desenvolvimento de back-end é tudo aquilo que possibilita o funcionamento.\nSendo assim, front-end e back-end estão bastante ligados, porém o segundo é voltado aos bancos de dados e servidores; responsável por atualizações, mudanças, segurança, gerenciamento de conteúdo, estrutura, etc. Se tomarmos o exemplo das redes sociais, seu funcionamento só é possível com um banco de dados que contenha informações como nome, data de nascimento, foto de perfil, e por aí vai.</string>
+    <string name="txtfrontend">O que é Front End?\nPodemos classificar como a parte visual de um site, aquilo que conseguimos interagir\nQuem trabalha com Front End é responsável por desenvolver por meio de código uma interface gráfica, normalmente com as tecnologias base da Web (HTML, CSS e JavaScript).\nAlgumas pessoas podem confundir um pouco esse trabalho com o que um designer faz (no passado existia uma entidade chamda Webmaster que fazia tudo isso e mais um pouco), mas a diferença aqui é que o designer vai utilizar alguma ferramenta visual para desenhar a interface, do Photoshop ao Sketch, e quem faz front-end estará mais próxima do código em si, que irá rodar em um navegador Web como Chrome, Firefox ou Safari.</string>
+    <string name="txtanalise">Análise de sistemas é a atividade que tem como finalidade a realização de estudos de processos a fim de encontrar o melhor caminho racional para que a informação possa ser processada. Os analistas de sistemas estudam os diversos sistemas existentes entre hardwares (equipamentos), softwares (programas) e o usuário final.\nOs seus comportamentos e aplicações são desenvolvidos a partir de soluções que serão padronizadas e transcritas da forma que o computador possa executar.\nOs profissionais da área geram softwares (programas), que são executados em hardwares (equipamentos) operados por usuários (indivíduos), preparados e treinados em procedimentos operacionais padronizados, dotados de conhecimentos do software e hardware para seu trabalho. A partir de então a análise de sistemas é uma profissão cujas responsabilidades concentram-se na análise do sistema e na administração de sistemas computacionais. Cabe a este profissional parte da organização, implantação e manutenção de aplicativos e redes de computadores, ou seja, o analista de sistemas é o responsável pelo levantamento de informações sobre uma empresa a fim de utilizá-las no desenvolvimento de um sistema para a mesma ou para o levantamento de uma necessidade específica do cliente para desenvolver este programa específico com base nas informações colhidas.\nO profissional geralmente possui conhecimento adquirido em faculdades de Sistemas de informação, Sistemas para Internet, Ciência da computação, Análise de sistemas, Engenharia de Computação, Engenharia de Software, Processamento de dados, Informática, Licenciatura em Computação ou outros cursos similares, mas a ausência de restrições para o exercício do cargo permite a profissionais capacitados de outras áreas ou mesmo que não possuem educação superior cumprirem este papel nas empresas.\nComo é uma ênfase, o foco e o núcleo de trabalho está voltado para o processo de desenvolvimento de software, levando em conta a área tecnológica em que irá auxiliar. O analista de sistemas deve servir como um tradutor entre as necessidades do usuário e o programa a ser desenvolvido pelo programador. Para isto, deve ter conhecimento abrangente da área de negócio na qual o sistema será desenvolvido, a fim de que possa implementar corretamente as regras de negócio.</string>
+    <string name="txtinfra">Checamos de forma criteriosa e realizamos uma auditoria do seu ambiente que proporciona a visibilidade do ambiente e dos recursos disponíveis para suportar os serviços de TI e direcionar novos investimentos.\nSugerimos melhorias para o seu ambiente, tanto para continuidade, crescimento, atualização quanto para potencializar as soluções já em uso.\nRevisamos as versões dos recursos atuais e confrontamos aos disponíveis no mercado.\nGeramos relatórios Gerenciais ao final da aplicação da análise para facilitar a decisão dos investimentos em infraestrutura de TI e serviços.\nApontamos as prioridades e o investimento necessário para trazer impacto positivo para o seu ambiente, e claro, sempre adequando a solução ao tamanho do negócio dos nossos clientes.\nPossuímos como base um conjunto de softwares, práticas e processos que garantem integridade e imparcialidade nas verificações.</string>
+
+    <!--Contato-->
+    <string name="telefone">Telefone</string>
+    <string name="telefones">Telefones</string>
+    <string name="emailcontato">Email</string>
+    <string name="site">Site</string>
+    <string name="redessociais">Redes Sociais</string>
+    <string name="systemstrength">System Strength</string>
+    <string name="phonesystem"><u>(11) 38039-4002</u></string>
+    <string name="phonekaua"><u>(11) 99802-2004</u></string>
+    <string name="phonedanilo"><u>(11) 98049-5190</u></string>
+    <string name="phonematheus"><u>(11) 99194-6874</u></string>
+    <string name="phonepedro"><u>(11) 97403-1595</u></string>
+    <string name="emailsystem">systemstrengthofc@gmail.com</string>
+    <string name="emailkaua">kauavitorioof@gmail.com</string>
+    <string name="emaildanilo">danilooliveira@gmail.com</string>
+    <string name="emailmatheus">matheus@gmail.com</string>
+    <string name="emailpedro">pedromorato@gmail.com</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="endsystem">R. Guaipá, 678</string>
+    <string name="visualizarnomapa"><u>Visualizar no mapa</u></string>
+    <string name="instagramsystem"><u>System Strength</u></string>
+    <string name="youtubesystem"><u>System Strength</u></string>
+    <string name="twittersystem"><u>SystemStrength1</u></string>
+    <string name="githubsystem"><u>System Strength</u></string>
+
+    <!--Contratos-->
+    <string name="contrato"><i><u>Contrato</u></i></string>
+    <string name="contratode">Contrato: </string>
+    <string name="contratoapresentado">Contraaaa</string>
+
+    <!--Info-->
+    <string name="txtjava"><u><b>Oque é Java?</b></u>\nJava é uma linguagem de programação orientada a objetos desenvolvida na década de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems. Em 2008 o Java foi adquirido pela empresa Oracle Corporation.\nDiferente das linguagens de programação modernas, que são compiladas para código nativo, a linguagem Java é compilada para um bytecode que é interpretado por uma máquina virtual (Java Virtual Machine, mais conhecida pela sua abreviação JVM).\nA linguagem de programação Java é a linguagem convencional da Plataforma Java, mas não é a sua única linguagem. J2ME Para programas e jogos de computador, celular, calculadoras, ou até mesmo o rádio do carro.</string>
+    <string name="txtjcsharp"><u><b>Oque é C#?</b></u>\nC# é uma linguagem de programação, multiparadigma, de tipagem forte, desenvolvida pela Microsoft como parte da plataforma .NET.\nA sua sintaxe orientada a objetos foi baseada no C++ mas inclui muitas influências de outras linguagens de programação, como Object Pascal e, principalmente, Java.\nO código fonte é compilado para Common Intermediate Language (CIL) que é interpretado pela máquina virtual Common Language Runtime (CLR). C# é uma das linguagens projetadas para funcionar na Common Language Infrastructure da plataforma .NET Framework.</string>
+    <string name="txtjs" tools:ignore="Typos"><u><b>Oque é JavaScript?</b></u>\nJavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional).\nJuntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web.\nA grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.</string>
+    <string name="txthtml"><u><b>Oque é Html?</b></u>\nHTML (abreviação para a expressão inglesa HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto) é uma linguagem de marcação utilizada na construção de páginas na Web.\nDocumentos HTML podem ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML.</string>
+    <string name="txtcss"><u><b>Oque é CSS</b></u>\nCascading Style Sheets (CSS) é um mecanismo para adicionar estilo (cores, fontes, espaçamento, etc.) a um documento web.\nO código CSS pode ser aplicado diretamente nas tags ou ficar contido dentro das tags style Também é possível, em vez de colocar a formatação dentro do documento, criar um link para um arquivo CSS que contém os estilos.\nAssim, quando se quiser alterar a aparência dos documentos vinculados a este arquivo CSS, basta modifica-lo.</string>
+    <string name="devresponsa">Desenvolvedor responsavel: Kauã Vitório</string>
+    <string name="versao">Versão: 1.2.1</string>
+    <string name="txtatualizacao">A última versão já está instalada.</string>
+    <string name="copyrightsystem">© 2020 System Strength</string>
+    <string name="licenseinfo">License</string>
+    <string name="licensetext"> <u><b>MIT License</b></u>\n<u>Copyright (c) 2020 System Strength</u>\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+
+    <!--Adapters-->
+    <string name="precioneparaaisinfo">Pressione e segure para abrir o menu</string>
+
+    <!--Site-->
+    <string name="carregando">Carregando...</string>
+
+
+</resources>

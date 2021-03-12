@@ -1,0 +1,148 @@
+﻿@model AppBancoDominio.Produto
+@{
+    ViewBag.Title = "Cadastrar Cliente";
+    Layout = "~/Views/Shared/_PalacePetz.cshtml";
+}
+<style>
+    .back {
+        text-decoration: underline;
+        margin-left: -5%;
+        font: bold 10pt sans-serif;
+        color: black;
+    }
+
+    section {
+        margin-left: 18%;
+        display: inline-flex;
+    }
+
+    h2 {
+        text-align: center;
+        display: inline-flex;
+        margin-left: 25%;
+        font: bold 15pt;
+        margin-bottom: 5%;
+    }
+
+    .form-horizontal {
+        border-radius: 5px;
+        padding-top: 2%;
+        padding-left: 10%;
+        background-color: white;
+        display: block;
+        width: 70vw;
+        height: 90vh;
+        margin-top: 5%;
+    }
+
+    .label2 {
+        width: 30%;
+        margin: 0% 10%;
+        display: flex;
+        margin-right: -15%;
+        font: bold 12pt sans-serif;
+    }
+
+    .form-group {
+        margin-top: 4.2%;
+        margin-left: 5%;
+        display: flex;
+    }
+
+    .editor {
+        font: italic 12pt sans-serif;
+        display: flex;
+        background: none;
+        width: 23vw;
+        border: none;
+        border-bottom: solid 3px #000;
+        outline: none;
+    }
+
+    .cracha {
+        display: flex;
+        width: 45%;
+        margin-top: -50%;
+        margin-left: 45%;
+    }
+
+    .btn_cad {
+        text-transform: uppercase;
+        display: block;
+        border: none;
+        margin-top: 12%;
+        margin-left: 18%;
+        text-decoration: none;
+        padding: 10px;
+        width: 50%;
+        max-width: 200px;
+        background: #677eff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.5s;
+    }
+
+        .btn_cad:hover {
+            background: #88d9de;
+            color: black;
+            font: bold;
+        }
+</style>
+<section>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h2>Cadastrar Produto</h2>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nm_prod, new { htmlAttributes = new { placeholder = "Nome do Produto", @class = "editor"} })
+                @Html.ValidationMessageFor(model => model.nm_prod, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.qntd_prod, new { htmlAttributes = new { placeholder = "Quantidade de Produto", @class = "editor" } })
+                @Html.ValidationMessageFor(model => model.qntd_prod, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cat_prod, new { htmlAttributes = new { placeholder = "Categoria do Produto", @class = "editor" } })
+                @Html.ValidationMessageFor(model => model.cat_prod, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.preco_prod, new { htmlAttributes = new { placeholder = "Preço do Produto", @class = "editor" } })
+                <h7 style="font-style: italic; font-size: 10pt;">Obs. Digite apenas números....</h7>
+                @Html.ValidationMessageFor(model => model.preco_prod, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.data_prod, new { htmlAttributes = new { placeholder = "Data de Cadastro do Produto", @class = "editor" } })
+                @Html.ValidationMessageFor(model => model.data_prod, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Cadastrar" class="btn_cad" />
+            </div>
+        </div>
+        <img src="~/fonts/cracha_prod.png" class="cracha">
+        <div>
+            @Html.ActionLink("Ver Listas de Produtos Cadastrados", "ProdCadastrados", "Inicio", new { @class = "back" })
+        </div>
+    </div>
+    }
+</section>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#data_prod").inputmask("mask", { "mask": "99/99/9999" }, { reverse: true });
+        })
+    </script>
+}

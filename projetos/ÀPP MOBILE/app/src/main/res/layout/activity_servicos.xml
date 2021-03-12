@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#000"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ServicosActivity">
+
+    <!--Body-->
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="UselessLeaf">
+
+        <!--Contender-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--CardView Nossa Equipe-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewnossaequipeservicos"
+                android:layout_width="350dp"
+                android:layout_height="195dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--Base-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--Text Nossos Especialistas-->
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/nossosespecialistas"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--Text Aqui Você pode...-->
+
+                    <!--CardView More-->
+                    <TextView
+                        android:id="@+id/txtsobreequipe"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/txtfuncsystem"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardviewbtnmoreequipe"
+                        android:layout_width="151dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="16dp"
+                        app:cardBackgroundColor="#FF3300"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="20dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtsobreequipe">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!--Text + -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:text="@string/icomore"
+                                android:textColor="#fff"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Animation Working-->
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="140dp"
+                        android:layout_height="130dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="35dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        app:lottie_autoPlay="true"
+                        app:lottie_rawRes="@raw/workingtogether" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Contraint Back-End-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayoutbackend"
+                android:layout_width="180dp"
+                android:layout_height="230dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardviewnossaequipeservicos">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewimgbackend"
+                    android:layout_width="160dp"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_rawRes="@raw/backendmobile" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#F2FF8D41"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtbackend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/backend"
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtbtnbackend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/maisinfo"
+                            android:layout_marginStart="16dp"
+                            android:textSize="15sp"
+                            android:textColor="#EB000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtbackend" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Contraint Front-End-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintfrontend"
+                android:layout_width="180dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/constraintlayoutbackend"
+                app:layout_constraintTop_toBottomOf="@+id/cardviewnossaequipeservicos">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewimgfrontend"
+                    android:layout_width="160dp"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_rawRes="@raw/frontend" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#F21CCAFF"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtfrontend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/frontend"
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txtbtnfrontend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/maisinfo"
+                            android:layout_marginStart="16dp"
+                            android:textSize="15sp"
+                            android:textColor="#EB000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtfrontend" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Contraint Analise-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayoutanalise"
+                android:layout_width="180dp"
+                android:layout_height="230dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintlayoutbackend">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewimganalise"
+                    android:layout_width="160dp"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="135dp"
+                            android:layout_height="140dp"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_rawRes="@raw/analise" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#F2A1FF43"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtanalise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/analise"
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtbtnanalise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/maisinfo"
+                            android:textColor="#EB000000"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtanalise" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Contraint Infra-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintinfra"
+                android:layout_width="180dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/constraintlayoutanalise"
+                app:layout_constraintTop_toBottomOf="@+id/constraintfrontend">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewimginfra"
+                    android:layout_width="160dp"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_rawRes="@raw/infra" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="#F2CD59FF"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtinfra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/infra"
+                            android:textColor="#000"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtbtninfra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/maisinfo"
+                            android:textColor="#EB000000"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtinfra" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--CardView Animation Principal-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewloadingprincipalservicos"
+                android:layout_width="350dp"
+                android:layout_height="300dp"
+                app:cardCornerRadius="20dp"
+                android:visibility="gone"
+                android:outlineProvider="none"
+                app:cardBackgroundColor="#33515151"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/phone"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Card Animation Clientes-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/loadingparaclientesservicos"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:visibility="gone"
+                android:outlineProvider="none"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#97000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:outlineProvider="none"
+                    android:layout_height="match_parent">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/aberturaaocliente"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Card Animation Agenda-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/loadingparaagendaservicos"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:visibility="gone"
+                android:outlineProvider="none"
+                android:layout_marginBottom="150dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#97000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:outlineProvider="none"
+                    android:layout_height="match_parent">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animacaoagenda"
+                        android:layout_width="280dp"
+                        android:layout_height="280dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/scanningsearching" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/popupbackend"
+                android:layout_width="380dp"
+                android:layout_height="250dp"
+                android:visibility="gone"
+                android:background="@drawable/popsupservices"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!--NavBar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <!--Base to start the navigation bar-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Constrant to designer-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/navbarprincipal"
+                android:layout_width="350dp"
+                android:layout_height="62dp"
+                android:background="@drawable/navbardesigner"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <!--Home Button-->
+                <LinearLayout
+                    android:id="@+id/linearbtnhomeservicos"
+                    android:layout_width="50dp"
+                    android:layout_height="62dp"
+                    android:layout_marginStart="45dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--Base Contender-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!--Image Home-->
+                        <ImageView
+                            android:contentDescription="@string/descnamesystem"
+                            android:id="@+id/imghome"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/iconehomepreto"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--Text Home-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home"
+                            android:textColor="#000"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imghome"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <!--Contact Button-->
+                <LinearLayout
+                    android:id="@+id/linearbtncontatoservicos"
+                    android:layout_width="50dp"
+                    android:layout_height="62dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/linearbtnservicosservicos"
+                    app:layout_constraintStart_toEndOf="@+id/linearbtnhomeservicos"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <!--Base Contender-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!--Image Contato-->
+                        <ImageView
+                            android:id="@+id/imgagenda"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/imgagendapreta"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:contentDescription="@string/descnamesystem"/>
+
+                        <!--Text Contato-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/agenda"
+                            android:textColor="#000"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imgagenda" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <!--Services Button-->
+                <LinearLayout
+                    android:id="@+id/linearbtnservicosservicos"
+                    android:layout_width="50dp"
+                    android:layout_height="62dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/linearbtnclientesservicos"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--Base Contender-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!--Image Serviço-->
+                        <ImageView
+                            android:id="@+id/imgservico"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="4dp"
+                            android:contentDescription="@string/descnamesystem"
+                            android:src="@drawable/iconeservicoslaranja"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--Text Serviços-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/servicos"
+                            android:textColor="#000"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imgservico"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <!--Client Button-->
+                <LinearLayout
+                    android:id="@+id/linearbtnclientesservicos"
+                    android:layout_width="50dp"
+                    android:layout_height="62dp"
+                    android:layout_marginEnd="45dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--Base Contender-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!--Image Contato-->
+                        <ImageView
+                            android:id="@+id/imgcliente"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="4dp"
+                            android:contentDescription="@string/descnamesystem"
+                            android:src="@drawable/imgclientepreto"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--Text Contato-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/clientes"
+                            android:textColor="#000"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imgcliente"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

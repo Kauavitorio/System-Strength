@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+
+    <!--Icone System e Menu de Login-->
+    <RelativeLayout
+        android:id="@+id/relativeimgsystem"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="10dp"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <!--Imagem System-->
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="550dp"
+            android:adjustViewBounds="true"
+            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/descnamesystem"
+            android:background="@drawable/systemstrengthlogosemfundo" />
+
+
+        <!--Cantos para realizar o Login-->
+        <RelativeLayout
+            android:id="@+id/relativeprincipallogin"
+            android:visibility="gone"
+            android:layout_below="@+id/imgView"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:layout_height="wrap_content">
+
+            <!--Txt Login-->
+            <TextView
+                android:id="@+id/tvlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/login"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"/>
+
+            <!--CPF and Password-->
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_below="@+id/tvlogin"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txttitulocpf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cpf"
+                        android:textAllCaps="true"
+                        android:textSize="15sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="sans-serif-light"/>
+
+                    <EditText
+                        android:id="@+id/edittextcpffunc"
+                        android:background="@drawable/outline"
+                        android:layout_width="match_parent"
+                        android:textSize="15sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="40dp"
+                        android:textColor="#FFFFFF"
+                        android:paddingLeft="15dp"
+                        android:inputType="number"
+                        android:textColorHint="#85FFFFFF"
+                        android:hint="@string/hinteditcpf"
+                        android:paddingRight="15dp"
+                        tools:ignore="Autofill,TextFields" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textviewsenha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/senha"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/edittextsenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/outline"
+                        android:hint="@string/hintsenha"
+                        android:inputType="textPassword"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#85FFFFFF"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textviewsenha"
+                        tools:ignore="Autofill" />
+
+                    <ImageView
+                        android:id="@+id/imgolhoopenpassword"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="32dp"
+                        android:visibility="gone"
+                        android:src="@drawable/iconeeyeopenpassword"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textviewsenha"
+                        android:contentDescription="@string/descnamesystem" />
+
+                    <ImageView
+                        android:id="@+id/imgolhoclosepassword"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="visible"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/iconeeyecolsepassword"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:contentDescription="@string/descnamesystem"
+                        app:layout_constraintTop_toBottomOf="@+id/textviewsenha" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <!--Btn login-->
+            <Button
+                android:id="@+id/btnlogaragora"
+                android:background="@drawable/outlinebutton"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:text="@string/logaragora"
+                android:textSize="15sp"
+                android:paddingLeft="70dp"
+                android:paddingRight="70dp"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"
+                android:layout_below="@id/linear1"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--Campos Btns Esquecia a senha e não tenho conta-->
+    <RelativeLayout
+        android:id="@+id/relativeinferiorlogin"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btncriarconta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:textColor="#ffffff"
+            android:text="@string/criarconta"
+            android:fontFamily="sans-serif-medium"/>
+
+        <Button
+            android:id="@+id/btnesqueciasenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="#00000000"
+            android:textColor="#ffffff"
+            android:text="@string/esqueciasenha"
+            android:fontFamily="sans-serif-medium"
+            tools:ignore="RelativeOverlap" />
+
+
+    </RelativeLayout>
+
+    <!--ProgressBar to loading the login-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressloadinglogin"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:indeterminateDrawable="@drawable/cpb_1"
+        android:indeterminateDuration="@android:integer/config_longAnimTime"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="175dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="265dp"
+        app:lottie_rawRes="@raw/loading2"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:visibility="visible" />
+
+</RelativeLayout>

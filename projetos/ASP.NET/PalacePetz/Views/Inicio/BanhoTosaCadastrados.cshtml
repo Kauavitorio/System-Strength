@@ -1,0 +1,138 @@
+﻿@model IEnumerable<AppBancoDominio.BanhoTosa>
+@{
+    ViewBag.Title = "ClientesCadastrados";
+    Layout = "~/Views/Shared/_PalacePetz.cshtml";
+}
+<style>
+    .novoBanhoTosa {
+        text-decoration: underline;
+        margin-left: 10%;
+        font: bold 12pt sans-serif;
+        color: black;
+    }
+
+    h2 {
+        width: 50vw;
+        display: inline-flex;
+        margin-left: 35%;
+        font: bold 25pt sans-serif;
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+
+    section {
+        width: 102%;
+        margin-top: 2%;
+        margin-left: -2%;
+        padding-right: 10.4%;
+    }
+
+    table {
+        box-shadow: 4px 5px 5px #004a6b;
+        border: solid 2px #171720;
+        display: flex;
+        margin-left: 9%;
+        background-color: rgba(255, 255, 255, 0.75);
+        color: #000;
+    }
+
+    th {
+        text-align: center;
+        border: solid 2px #171720;
+        border-left: none;
+        font: bold 10pt sans-serif;
+    }
+
+    td {
+        text-align: center;
+        border: solid 2px #171720;
+        border-left: none;
+        font: normal 1em sans-serif;
+    }
+
+    .op {
+        border-right: none;
+    }
+</style>
+<h2>Banho e Tosa Agendados</h2>
+<p>@Html.ActionLink(" - Agendar novo Serviço de Banho e Tosa", "CadastrarBanhoTosa", "Inicio", new { @class = "novoBanhoTosa" })</p>
+<section>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cd_Animal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.raca_animal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nm_cli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf_cli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.end_cli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tel_cli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nm_func)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dt_serv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hr_serv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.forma_paga)
+            </th>
+            <th class="op">
+                Opções:
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cd_Animal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.raca_animal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nm_cli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cpf_cli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.end_cli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tel_cli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nm_func)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dt_serv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.hr_serv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.forma_paga)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "EditarBanhoTosa", new { id=item.cd_Animal }) |
+                    @Html.ActionLink("Detalhes", "DetalhesBanhoTosa", new { id = item.cd_Animal }) |
+                    @Html.ActionLink("Excluir", "ExcluirBanhoTosa", new { id = item.cd_Animal })
+                </td>
+            </tr>
+        }
+    </table>
+</section>

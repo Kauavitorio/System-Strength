@@ -1,0 +1,113 @@
+﻿@model IEnumerable<AppBancoDominio.Produto>
+@{
+    ViewBag.Title = "ClientesCadastrados";
+    Layout = "~/Views/Shared/_PalacePetz.cshtml";
+}
+<style>
+    .novoProd {
+        text-decoration: underline;
+        margin-left: 10%;
+        font: bold 12pt sans-serif;
+        color: black;
+    }
+
+    h2 {
+        width: 50vw;
+        display: inline-flex;
+        margin-left: 35%;
+        font: bold 25pt sans-serif;
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+
+    section {
+        width: 90%;
+        margin-top: 2%;
+        margin-left: 3%;
+        padding-right: 5%;
+    }
+
+    table {
+        box-shadow: 4px 5px 5px #004a6b;
+        border: solid 2px #171720;
+        display: flex;
+        margin-left: 7%;
+        background-color: rgba(255, 255, 255, 0.75);
+        color: #000;
+    }
+    th {
+        text-align: center;
+        border: solid 2px #171720;
+        border-left: none;
+        font: bold 1em sans-serif;
+    }
+
+    td {
+        text-align: center;
+        border: solid 2px #171720;
+        border-left: none;
+        font: normal 1em sans-serif;
+    }
+
+    .op {
+        border-right: none;
+    }
+</style>
+<h2>Produtos Cadastrados</h2>
+<p>@Html.ActionLink(" - Cadastrar novo Produto", "CadastrarProd", "Inicio", new { @class = "novoProd" })</p>
+<section>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id_prod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nm_prod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.qntd_prod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cat_prod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.preco_prod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data_prod)
+            </th>
+            <th class="op">
+                Opções:
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_prod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nm_prod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.qntd_prod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cat_prod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.preco_prod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data_prod)
+                </td>
+                <td class="op">
+                    @Html.ActionLink("Editar", "EditarProd", new { id = item.id_prod }) |
+                    @Html.ActionLink("Detalhes", "DetalhesProd", new { id = item.id_prod }) |
+                    @Html.ActionLink("Excluir", "ExcluirProd", new { id = item.id_prod })
+                </td>
+            </tr>
+        }
+    </table>
+</section>

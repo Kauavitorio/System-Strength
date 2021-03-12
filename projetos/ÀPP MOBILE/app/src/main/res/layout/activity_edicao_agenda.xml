@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
+    android:layout_height="match_parent"
+    tools:context=".EdicaoAgendaActivity">
+
+    <!--Header-->
+    <LinearLayout
+        android:layout_weight="11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Btn Voltar-->
+            <LinearLayout
+                android:id="@+id/linearvoltaraagendaedit"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--Arrow Animation-->
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/setinhaanimadaedit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="false"
+                        app:lottie_rawRes="@raw/setinhaesquerda" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/logosystemstrengthsemfundo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <!--Body-->
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessLeaf">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--CardView New Schedule-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewbaseforedit"
+                android:layout_width="380dp"
+                android:layout_height="520dp"
+                app:cardBackgroundColor="#0FFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <!--Text Titulo Client-->
+                    <TextView
+                        android:id="@+id/txttituloclientenovoagendamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/clientedoisponto"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--EditText Client-->
+                    <EditText
+                        android:id="@+id/edittextclienteedit"
+                        android:layout_width="250dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/outlinenovoagendamento"
+                        android:enabled="false"
+                        android:hint="@string/selecioneocliente"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:textSize="17sp"
+                        app:layout_constraintStart_toEndOf="@+id/txttituloclientenovoagendamento"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="Autofill,LabelFor,TextFields" />
+
+                    <!--Text Titulo CNPJ Client-->
+                    <TextView
+                        android:id="@+id/txttitulocnpjdoclientenovoagendamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/cnpjdoisponto"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txttituloclientenovoagendamento" />
+
+                    <!--EditText CNPJ Client-->
+                    <EditText
+                        android:id="@+id/edittextcnpjclienteedit"
+                        android:layout_width="250dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/outlinenovoagendamento"
+                        android:enabled="false"
+                        android:hint="@string/selecioneocliente"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:textSize="17sp"
+                        app:layout_constraintStart_toEndOf="@+id/txttitulocnpjdoclientenovoagendamento"
+                        app:layout_constraintTop_toBottomOf="@+id/edittextclienteedit"
+                        tools:ignore="Autofill,LabelFor,TextFields" />
+
+                    <!--Text Titulo Data Client-->
+                    <TextView
+                        android:id="@+id/txttitulodatanovoagendamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="17dp"
+                        android:text="@string/dataagenda"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txttitulocnpjdoclientenovoagendamento" />
+
+                    <!--EditText Data Client-->
+                    <EditText
+                        android:id="@+id/edittextdataedit"
+                        android:layout_width="250dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/outlinenovoagendamento"
+                        android:hint="@string/hintdataagenda"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/txttitulodatanovoagendamento"
+                        app:layout_constraintTop_toBottomOf="@+id/edittextcnpjclienteedit"
+                        tools:ignore="Autofill,LabelFor,TextFields" />
+
+                    <!--Text Titulo Hora Client-->
+                    <TextView
+                        android:id="@+id/txttitulohoranovoagendamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="17dp"
+                        android:text="@string/horaagenda"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txttitulodatanovoagendamento" />
+
+                    <!--EditText Hora Client-->
+                    <EditText
+                        android:id="@+id/edittexthoraedit"
+                        android:layout_width="250dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/outlinenovoagendamento"
+                        android:hint="@string/hinthoraagenda"
+                        android:inputType="time"
+                        android:maxLength="10"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/txttitulohoranovoagendamento"
+                        app:layout_constraintTop_toBottomOf="@+id/edittextdataedit"
+                        tools:ignore="Autofill,LabelFor,TextFields" />
+
+                    <!--Text Titulo Local Client-->
+                    <TextView
+                        android:id="@+id/txttitulolocalnovoagendamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="17dp"
+                        android:text="@string/localagenda"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txttitulohoranovoagendamento" />
+
+                    <!--EditText Local Client-->
+                    <EditText
+                        android:id="@+id/edittextlocaledit"
+                        android:layout_width="250dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/outlinenovoagendamento"
+                        android:hint="@string/hintlocalagenda"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/txttitulohoranovoagendamento"
+                        app:layout_constraintTop_toBottomOf="@+id/edittexthoraedit"
+                        tools:ignore="Autofill,LabelFor,TextFields" />
+
+                    <LinearLayout
+                        android:id="@+id/btnendclienteedit"
+                        android:layout_width="200dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edittextlocaledit"
+                        tools:ignore="UselessLeaf">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/btnenderecodocliente"
+                                android:textColor="#fff"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.84"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <!--Text Titulo Desc Client-->
+                    <TextView
+                        android:id="@+id/txttitulodescnovoagendamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="17dp"
+                        android:text="@string/descagenda"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txttitulolocalnovoagendamento" />
+
+                    <!--EditText Desc Client-->
+                    <EditText
+                        android:id="@+id/edittextdescedit"
+                        android:layout_width="325dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/outline"
+                        android:hint="@string/hintdescagenda"
+                        android:maxLength="200"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txttitulodescnovoagendamento"
+                        tools:ignore="Autofill,LabelFor,TextFields" />
+
+                    <LinearLayout
+                        android:id="@+id/linearselecionaroutroclienteedit"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edittextdescedit">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/selecionaroutrocliente"
+                                android:textAlignment="center"
+                                android:textColor="#fff"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--CardView Btn Save-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewbtnsalvareditagenda"
+                android:layout_width="202dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardviewbaseforedit">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        app:cardBackgroundColor="#000"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/animacaobolinhaedit"
+                                android:layout_width="130dp"
+                                android:layout_height="match_parent"
+                                app:lottie_rawRes="@raw/bolinha"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/animacaocheckedit"
+                                android:layout_width="140dp"
+                                android:layout_height="70dp"
+                                app:lottie_rawRes="@raw/checkmarck"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtsalvaredit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/salvar"
+                                android:textColor="#fff"
+                                android:textSize="30sp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

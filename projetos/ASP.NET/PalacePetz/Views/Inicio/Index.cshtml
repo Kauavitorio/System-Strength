@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PalacePetz.cshtml";
+}
+
+<html>
+<style>
+    h2 {
+        font-size: 40pt;
+        color: white;
+        display: inline-flex;
+        margin-left: 20%;
+        text-align: center;
+        animation: animate 5s linear infinite;
+        text-shadow: 5px 10px 15px #003cff;     
+        border-bottom: solid 5px #0026ff;
+        transition: ease 0.5s;
+        }
+    .slider img {
+        border-radius: 10px;
+        bottom: 0%;
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.10);
+        z-index: -10;
+        opacity: 0;
+        position: absolute;
+        width: 200%;
+        height: 75%;
+        object-fit: cover;
+        transition: opacity 800ms;
+    }
+        .slider img.selected {
+            opacity: 1;
+        }
+
+</style>
+<body>
+    <h2>Bem-Vindo ao Sistema da Palace Petz</h2>
+    <div class="slider">
+        <img class="selected" src="~/fonts/silder_one.jpg" alt="" style="width:75%; margin: 3% 15.9%">
+        <img src="~/fonts/silder_two.jpg" alt="" style="width:75%; margin: 3% 15.9%">
+        <img src="~/fonts/slider_tree.jpg" alt="" style="width:75%; margin: 3% 15.9%">
+        <img src="~/fonts/slider_four.jpg" alt="" style="width:75%; margin: 3% 15.9%">
+    </div>
+</body>
+<script language="JavaScript">
+    let time = 3000,
+        currentImageLweb = 0,
+        images = document.querySelectorAll(".slider img")
+    max = images.length;
+
+    function nextImage() {
+        images[currentImageLweb].classList.remove("selected")
+
+        currentImageLweb++
+
+        if (currentImageLweb >= max)
+            currentImageLweb = 0
+
+        images[currentImageLweb].classList.add("selected")
+    }
+
+    function start() {
+        setInterval(() => {
+            //Troca de imagem
+            nextImage()
+        }, time)
+    }
+    window.addEventListener("load", start)
+</script>
+</html>

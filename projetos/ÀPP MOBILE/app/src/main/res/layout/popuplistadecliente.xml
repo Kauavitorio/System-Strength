@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_gravity="center"
+    android:background="#171717"
+    android:layout_height="500dp">
+
+    <!--Header-->
+    <LinearLayout
+        android:id="@+id/btncloselista"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/close" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:src="@drawable/logosystemstrengthsemfundo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <!--Body-->
+    <ListView
+        android:id="@+id/listaviewclienteeditagenda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#FF4900"
+        android:dividerHeight="2dp"
+        android:background="#171717"/>
+
+</LinearLayout>

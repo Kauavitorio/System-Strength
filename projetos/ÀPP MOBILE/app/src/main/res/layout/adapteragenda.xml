@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#000"
+    android:layout_height="wrap_content">
+
+    <!--Txt Name client-->
+    <TextView
+        android:id="@+id/txtnomeclienteagendalista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Img animation Clock-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/imganimationclock"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnomeclienteagendalista"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/clock" />
+
+    <!--Txt Time-->
+    <TextView
+        android:id="@+id/txthoraagenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#EDFDFDFD"
+        android:layout_marginTop="10dp"
+        android:textSize="19sp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/imganimationclock"
+        app:layout_constraintTop_toBottomOf="@+id/txtnomeclienteagendalista" />
+
+    <!--Img animation Date-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/imganimationdate"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/txthoraagenda"
+        app:layout_constraintTop_toBottomOf="@+id/txtnomeclienteagendalista"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/calender2" />
+
+    <!--Txt Date-->
+    <TextView
+        android:id="@+id/txtdataagenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#EDFDFDFD"
+        android:layout_marginTop="10dp"
+        android:textSize="19sp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintStart_toEndOf="@+id/imganimationdate"
+        app:layout_constraintTop_toBottomOf="@+id/txtnomeclienteagendalista" />
+
+    <!--Img animation Local-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/imganimationlocal"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imganimationclock"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/location2" />
+
+    <!--Txt Local-->
+    <TextView
+        android:id="@+id/txtlocalagenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="11dp"
+        android:textColor="#EDFDFDFD"
+        android:textSize="19sp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imganimationclock"
+        app:layout_constraintTop_toBottomOf="@+id/txthoraagenda" />
+
+    <!--Txt info-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/precioneparaaisinfo"
+        android:textColor="#A6FFFFFF"
+        android:layout_marginEnd="5dp"
+        android:textSize="9sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SmallSp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

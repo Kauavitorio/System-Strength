@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradientavisoerro"
+    tools:context=".AvisoErroActivity">
+
+    <!--
+          Copyright (c) 2020 System Strength
+          Official repository https://github.com/System-Strength/Mobile
+          Responsible developer: https://github.com/Kauavitorio
+     -->
+
+    <!--Header-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <!--Base for all inside header-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Button Back-->
+            <LinearLayout
+                android:id="@+id/linearbtnvoltaravisoerro"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/voltar"
+                        android:textSize="19sp"
+                        android:textColor="#B0FF0000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <!--Image System-->
+            <ImageView
+                android:contentDescription="@string/descnamesystem"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/logosystemstrengthsemfundo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <!--ScrollView for Small Screen-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Base for content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--Text "Opss.."-->
+                <TextView
+                    android:id="@+id/txttituloopsaviso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/ops"
+                    android:textColor="#fff"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Text "Não foi possivel realizar o seu cadastro"-->
+                <TextView
+                    android:id="@+id/txtnaofoipossivelaviso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/naofoipossivelfazerseucadastro"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="21sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txttituloopsaviso" />
+
+                <!--Text "Não foi possivel conectar ao banco de dados..."-->
+                <TextView
+                    android:id="@+id/txtavisonaofoipossiveldb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/naofoipossivelconectaraobanco"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtnaofoipossivelaviso" />
+
+                <!--Line partition-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="#fff"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtavisonaofoipossiveldb" />
+
+                <!--Text "Contate nossa equipe..."-->
+                <TextView
+                    android:id="@+id/txtavisocontetenossaequipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/contatenossaequipe"
+                    android:textColor="#C3FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+    <!--
+          Copyright (c) 2020 System Strength
+          Official repository https://github.com/System-Strength/Mobile
+          Responsible developer: https://github.com/Kauavitorio
+     -->

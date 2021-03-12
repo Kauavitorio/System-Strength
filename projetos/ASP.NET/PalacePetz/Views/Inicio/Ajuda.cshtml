@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        section {
+            background-color: #171720;
+            width: 50vw;
+            margin-left: 25%;
+            margin-top: 5%;
+            display: inline-flex;
+        }
+        h2{
+            display: flex;
+            margin-left: 45%;
+            text-align: center;
+            color: #fff;
+        }
+        section .accordion {
+            width: 100%;
+        }
+        .accordion .contentBx {
+            position: relative;
+            margin: 80px 20px;
+        }
+        .accordion .contentBx .label {
+            position: relative;
+            width: 15%;
+            padding: 10px 35px;
+            background: #00aeff;
+            color: #fff;
+            font: bold 15pt Arial;
+            cursor: pointer;
+        }
+        .accordion .contentBx .label::before {
+            content: '+';
+            color: #171720;
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+        }
+        .accordion .contentBx.active .label::before {
+            content: '-';
+        }
+        .accordion .contentBx .content {
+            position: relative;
+            padding: 0px;
+            background: #fff;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            overflow-y: auto;
+        }
+            .accordion .contentBx.active .content {
+                height: 40px;
+                margin-top: 2%;
+                padding: 12px;
+            }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="accordion">
+            <div class="contentBx">
+                <div class="label">A Palace faz serviço Delivery?</div>
+                <div class="content">
+                    <p style="font: bold 14pt Arial;">Sim, entregamos via delivery, da maneira que você prefeir.</p>
+                </div>
+            </div>
+            <div class="contentBx">
+                <div class="label">A Palace Petz realiza consulta veterinária?</div>
+                <div class="content">
+                    <p style="font: bold 16pt Arial;">Sim, realizamos.</p>
+                </div>
+            </div>
+            <div class="contentBx">
+                <div class="label">Vocês vendem acessórios para cachorros?</div>
+                <div class="content">
+                    <p style="font: bold 16pt Arial;">Sim, vendemos.</p>
+                </div>
+            </div>
+            <div class="contentBx">
+                <div class="label">Como funciona o pagamento?</div>
+                <div class="content">
+                    <p style="font: bold 16pt Arial;">Funciona através de dinheiro e cartão e também parcelamos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+@Scripts.Render("~/Scripts/Accordion.js")
+</body>
+</html>

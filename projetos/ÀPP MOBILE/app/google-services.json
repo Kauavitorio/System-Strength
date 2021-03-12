@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "501052389657",
+    "firebase_url": "https://mobile-system-f51c5.firebaseio.com",
+    "project_id": "mobile-system-f51c5",
+    "storage_bucket": "mobile-system-f51c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501052389657:android:198af434155236ebb62d88",
+        "android_client_info": {
+          "package_name": "com.example.systemstrength"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501052389657-76nchsi0dkugdffq2950arl5lbqp08s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfzLqsM3U9SCzqLjx12fhcSpHJxSiE56A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501052389657-76nchsi0dkugdffq2950arl5lbqp08s3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

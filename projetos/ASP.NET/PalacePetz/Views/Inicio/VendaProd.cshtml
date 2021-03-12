@@ -1,0 +1,189 @@
+﻿@model AppBancoDominio.VendaProd
+<style>
+    .back {
+        text-decoration: underline;
+        margin-left: -5%;
+        font: bold 10pt sans-serif;
+        color: black;
+    }
+
+    section {
+        margin-left: 18%;
+        display: inline-flex;
+    }
+
+    h2 {
+        text-align: center;
+        display: inline-flex;
+        margin-left: 35%;
+        font: bold 15pt;
+        margin-bottom: 1%;
+    }
+
+    .form-horizontal {
+        border-radius: 5px;
+        padding-top: 0%;
+        padding-left: 10%;
+        background-color: white;
+        display: block;
+        width: 70vw;
+        height: 98vh;
+        margin-top: 0.8%;
+    }
+
+    .text-danger {
+        margin-left: -20%;
+        padding-bottom: 1%;
+        font-size: 10pt;
+    }
+
+    .label2 {
+        width: 30%;
+        margin: 0% 10%;
+        display: flex;
+        margin-right: -15%;
+        font: bold 12pt sans-serif;
+    }
+
+    .form-group {
+        margin-top: 3%;
+        margin-left: 5%;
+        display: flex;
+    }
+
+    .editor {
+        font: italic 12pt sans-serif;
+        display: inline-flex;
+        background: none;
+        width: 23vw;
+        border: none;
+        border-bottom: solid 3px #000;
+        outline: none;
+    }
+
+    .cracha {
+        display: flex;
+        width: 45%;
+        margin-top: -45%;
+        margin-left: 45%;
+    }
+
+    .btn_cad {
+        text-transform: uppercase;
+        display: block;
+        border: none;
+        margin-top: 8%;
+        margin-left: 3%;
+        text-decoration: none;
+        padding: 10px;
+        width: 50%;
+        max-width: 200px;
+        background: #677eff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.5s;
+    }
+
+        .btn_cad:hover {
+            background: #88d9de;
+            color: black;
+            font: bold;
+        }
+</style>
+<section>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <h2>Vendas</h2>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nm_cli, new { htmlAttributes = new { placeholder = "Nome do Cliente", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.Nm_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Cpf_cli, new { htmlAttributes = new { placeholder = "Cpf do Cliente", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.Cpf_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.End_cli, new { htmlAttributes = new { placeholder = "Endereço do Cliente", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.End_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Comple_cli, new { htmlAttributes = new { placeholder = "Complemento do Cliente", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.Comple_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Tel_cli, new { htmlAttributes = new { placeholder = "Telefone do Cliente", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.Tel_cli, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nm_prod, new { htmlAttributes = new { placeholder = "Nome do Produto", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.Nm_prod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Qntd_prod, new { htmlAttributes = new { placeholder = "Quantidade de Produto", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.Qntd_prod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Cat_prod, new { htmlAttributes = new { placeholder = "Categoria do Produto", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.Cat_prod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Forma_paga, new { htmlAttributes = new { placeholder = "Forma de Pagamento", @class = "editor" } })
+                    @Html.ValidationMessageFor(model => model.Forma_paga, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <img src="~/fonts/cracha_vendProd.png" class="cracha">
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10" style="display:flex">
+                    <input type="submit" value="Vender" class="btn_cad" onclick="Vender()" />
+                    <input type="reset" value="Limpar" class="btn_cad" onclick="Limpar()" />
+                </div>
+            </div>
+            <div>
+                @Html.ActionLink("Ver Relatório de Vendas", "RelatorioVen", "Inicio", new { @class = "back" })
+            </div>
+        </div>
+    }
+</section>
+<script>
+    function Vender() {
+        if (document.querySelector(".editor").value == "") {
+            alert("Preecha os campos obrigatórios!");
+        }
+        else {
+            alert("Produto Vendido com sucesso!")
+        }
+    }
+</script>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#Cpf_cli").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
+        })
+        $(document).ready(function () {
+            $("#Tel_cli").inputmask("mask", { "mask": "(99)9999-99999" });
+        })
+    </script>
+}

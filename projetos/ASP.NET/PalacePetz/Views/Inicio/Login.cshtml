@@ -1,0 +1,252 @@
+﻿@model AppBancoDominio.Login
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        section {
+            position: relative;
+            min-height: 100vh;
+            background: #50bac8;
+            background: #00b1ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .text-danger {
+            color: red;
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            margin-top: 10px;
+            margin-bottom: 2px;
+            margin-left: 1%;
+            font-style: italic;
+        }
+
+            section .container {
+                position: relative;
+                width: 800px;
+                height: 500px;
+                background: #fff;
+                box-shadow: 0 15px 50px rgba(0, 0, 0,0.1);
+                overflow: hidden;
+            }
+
+                section .container .user {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                }
+
+                    section .container .user .imgBx {
+                        position: relative;
+                        width: 50%;
+                        height: 100%;
+                        background: #ff0;
+                        transition: 0.5s;
+                    }
+
+                        section .container .user .imgBx img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                    section .container .user .formBx {
+                        position: relative;
+                        width: 50%;
+                        height: 100%;
+                        background-color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 40px;
+                        transition: 0.5s
+                    }
+
+            section .user .formBx h2 {
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                text-align: center;
+                width: 100%;
+                margin-bottom: 10px;
+                color: #555;
+            }
+
+            section .container .user .formBx .editor{
+                position: relative;
+                padding: 10px;
+                width: 300px;
+                background: #d9d9d9;
+                color: #333;
+                border: none;
+                margin-top: 10px;
+                margin-bottom: 2px;
+                margin-left: 1%;
+                letter-spacing: 1px;
+                font-weight: 300;
+            }
+
+            section .container .user .formBx .btn {
+                border: none;
+                text-decoration: none;
+                padding: 10px;
+                width: 80%;
+                max-width: 100%;
+                background: #677eff;
+                color: #fff;
+                cursor: pointer;
+                font-size: 14px;
+                letter-spacing: 1px;
+                transition: 0.5s;
+            }
+
+            section .container .user .formBx .signup {
+                position: relative;
+                margin-top: 20px;
+                font-size: 12px;
+                letter-spacing: 1px;
+                color: #555;
+                text-transform: uppercase;
+                font-weight: 300;
+            }
+
+                section .container .user .formBx form .signup a {
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: #677eff;
+                }
+
+            section .container .Ger {
+                pointer-events: none;
+            }
+
+            section .container.active .Ger {
+                pointer-events: initial;
+            }
+
+            section .container .Ger .formBx {
+                left: 100%;
+            }
+
+            section .container.active .Ger .formBx {
+                left: 0;
+            }
+
+            section .container .Ger .imgBx {
+                left: -100%;
+            }
+
+            section .container.active .Ger .imgBx {
+                left: 0;
+            }
+
+
+            section .container .Func .formBx {
+                left: 0;
+            }
+
+            section .container.active .Func .formBx {
+                left: 100%;
+            }
+
+            section .container .Func .imgBx {
+                left: 0;
+            }
+
+            section .container.active .Func .imgBx {
+                left: -100%;
+            }
+
+        media (max-width: 991px) {
+            section .container
+
+        {
+            max-width: 400px;
+        }
+
+        section .container .imgBx {
+            display: none;
+        }
+
+        section .container .user .formBx {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="container">
+                <div class="user Func">
+                    <div class="imgBx"><img src="~/fonts/dog1.jpg" alt="" id="img"></div>
+                    <div class="formBx">
+                        <form>
+                            <div class="form-horizontal">
+                                <h2 id="text">Entrar como Funcionário</h2>
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group" style="margin-bottom: 10%">
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.user_login, new { htmlAttributes = new { placeholder = "Nome de Usuário", @class = "editor", @id = "id_func" } })
+                                        @Html.ValidationMessageFor(model => model.user_login, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 10%">
+                                    <div class="col-md-10">
+                                        @Html.PasswordFor(model => model.senha_login, new { placeholder = "Senha de Usuário", @class = "editor" } )
+                                        @Html.ValidationMessageFor(model => model.senha_login, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Entrar" class="btn btn-default" onclick="EntrarFunc()" />
+                                    </div>
+                                </div>
+                                <p class="signup"><a href="#" onclick="toggleFormGer();"> Esqueceu a senha?</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="user Ger">
+                    <div class="formBx">
+                        <form>
+                            <div class="form-horizontal">
+                                <h2 style="font-size: 18pt;">RECUPERE SUA SENHA</h2>
+                                <h3 style="margin-top: 20%;font-size: 18px;font-weight: 600;text-transform: uppercase;letter-spacing: 2px;    text-align: center;width: 100%;margin-bottom: 10px;color: #555;">Solicite seu gerente, e recupere sua senha.</h3>
+                                <div style="font-size: 25pt; text-align: center;">😉</div>
+                                <p class="signup" style="text-align: center; margin-top: 15%;"><a href="#" onclick="toggleFormFunc();"> ENTRAR COMO FUNCIONÁRIO</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="imgBx"><img src="~/fonts/dog2.jpg" alt=""></div>
+                </div>
+            </div>
+        }
+    </section>
+</body>
+@Scripts.Render("~/Scripts/Login.js")
+</html>
