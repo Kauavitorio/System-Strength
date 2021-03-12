@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
+    tools:context=".CadastrodeClientesActivity">
+
+    <!--Header-->
+    <LinearLayout
+        android:layout_weight="11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Btn Voltar-->
+            <LinearLayout
+                android:id="@+id/linearvoltaraoclientes"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--Arrow Animation-->
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/setinhaanimada"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="false"
+                        app:lottie_rawRes="@raw/setinhaesquerda" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/logosystemstrengthsemfundo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+        <ScrollView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:scrollbarSize="4dp"
+            android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="40dp">
+
+                <!--Text Cadastrar no Cliente-->
+                <TextView
+                    android:id="@+id/txttitulocadastrarnvocliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/cadastrarnovocliente"
+                    android:textColor="#fff"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Name-->
+                <TextView
+                    android:id="@+id/txttitlonome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/nome"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txttitulocadastrarnvocliente" />
+
+                <!--EditText Name of client-->
+                <EditText
+                    android:id="@+id/edittextnomedocliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:background="@drawable/outline"
+                    android:hint="@string/nomedocliente"
+                    android:textColor="#fff"
+                    android:textColorHint="#8BFFFFFF"
+                    app:layout_constraintTop_toBottomOf="@+id/txttitlonome"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                <!--Endereço-->
+                <TextView
+                    android:id="@+id/txttitloend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/endereccliente"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edittextnomedocliente" />
+
+                <!--EditText Name of client-->
+                <EditText
+                    android:id="@+id/edittextenddocliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:background="@drawable/outline"
+                    android:hint="@string/enderecodocliente"
+                    android:textColor="#fff"
+                    android:textColorHint="#8BFFFFFF"
+                    app:layout_constraintTop_toBottomOf="@+id/txttitloend"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                <!--Phone-->
+                <TextView
+                    android:id="@+id/txttitlophone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/phonecliente"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edittextenddocliente" />
+
+                <!--EditText Phone of client-->
+                <EditText
+                    android:id="@+id/edittextphonedocliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:background="@drawable/outline"
+                    android:hint="@string/phonedocliente"
+                    android:textColor="#fff"
+                    android:textColorHint="#8BFFFFFF"
+                    app:layout_constraintTop_toBottomOf="@+id/txttitlophone"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                <!--Phone-->
+                <TextView
+                    android:id="@+id/txttitloemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/emailcliente"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edittextphonedocliente" />
+
+                <!--EditText Phone of client-->
+                <EditText
+                    android:id="@+id/edittextemaildocliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:maxLength="50"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/outline"
+                    android:hint="@string/emaildocliente"
+                    android:textColor="#fff"
+                    android:textColorHint="#8BFFFFFF"
+                    app:layout_constraintTop_toBottomOf="@+id/txttitloemail"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                <!--CNPJ-->
+                <TextView
+                    android:id="@+id/txttitlocnpj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/cnpjcliente"
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edittextemaildocliente" />
+
+                <!--EditText CNPJ of client-->
+                <EditText
+                    android:id="@+id/edittextcnpjdocliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/outline"
+                    android:hint="@string/cnpjedocliente"
+                    android:textColor="#fff"
+                    android:inputType="number"
+                    android:maxLength="18"
+                    android:textColorHint="#8BFFFFFF"
+                    app:layout_constraintTop_toBottomOf="@+id/txttitlocnpj"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                <!--Btn cadastrar-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewbtnsalvarnovocliente"
+                    android:layout_width="300dp"
+                    android:layout_height="65dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="#fff"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edittextcnpjdocliente">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="297dp"
+                            android:layout_height="63dp"
+                            app:cardBackgroundColor="#000"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/txtcadastrarbtnsalvar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/cadastrar"
+                                    android:textColor="#fff"
+                                    android:textSize="30sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/animacaoerro"
+                                    android:layout_width="200dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    app:lottie_rawRes="@raw/error1"
+                                    app:lottie_autoPlay="true"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/checkedanimation1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    app:lottie_rawRes="@raw/loadinghourglass"
+                                    app:lottie_autoPlay="true"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/checkedanimation2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    app:lottie_rawRes="@raw/checked3"
+                                    app:lottie_autoPlay="true"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+</LinearLayout>

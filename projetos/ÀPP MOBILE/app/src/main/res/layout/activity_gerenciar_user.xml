@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
+    tools:context=".GerenciarUserActivity">
+
+    <!--Header-->
+    <LinearLayout
+        android:layout_weight="11"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="#000"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_marginEnd="24dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/logosystemstrengthsemfundo"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <!--Btn Voltar-->
+            <LinearLayout
+                android:id="@+id/linearbtnvoltargerenciaruser"
+                android:layout_width="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UselessLeaf">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/voltar"
+                        android:textColor="#fd0000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessLeaf">
+
+
+            <!--Card User-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintcardviewperfilgerenciar"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="match_parent">
+
+                <!--Text Tittle Gerenciamento de Usuario-->
+                <TextView
+                    android:id="@+id/txttittlegerenciarusu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gerenciamentodeusu"
+                    android:textColor="#fff"
+                    android:textSize="23sp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <!--Edit CPF User-->
+                <EditText
+                    android:id="@+id/edittextpesquisarcpfusuariogerenciar"
+                    android:layout_width="280dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/hintgerenciarbuscarcpf"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:maxLength="14"
+                    android:textColorHint="#fff"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:background="@drawable/outlinepesquisacpfuser"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txttittlegerenciarusu"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                <!--CardView User-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewperfilusu"
+                    android:layout_width="300dp"
+                    android:layout_height="480dp"
+                    android:layout_marginTop="24dp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edittextpesquisarcpfusuariogerenciar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!--Base Superior Perfil-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/constraintsobperfilfoto"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <!--Effect button-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="60dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:outlineProvider="none"
+                                app:cardBackgroundColor="#000"
+                                app:cardCornerRadius="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                            <!--Contender Nome do Funcionario-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="210dp"
+                                android:layout_height="60dp"
+                                app:cardBackgroundColor="#FF9063"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <!--Name Funcionario-->
+                                    <TextView
+                                        android:id="@+id/txtnomefuncperfilgerenciar"
+                                        android:layout_width="140dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="12dp"
+                                        android:text="@string/nomefuncperfil"
+                                        android:textAlignment="center"
+                                        android:textColor="#000"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:ignore="TooDeepLayout" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--Img Avatar-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="95dp"
+                                android:layout_height="95dp"
+                                android:layout_marginEnd="40dp"
+                                android:outlineProvider="none"
+                                app:cardBackgroundColor="#FF8553"
+                                app:cardCornerRadius="50dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <!--Img Avatar-->
+                                    <ImageView
+                                        android:id="@+id/imgavatarusuperfil"
+                                        android:layout_width="85dp"
+                                        android:layout_height="85dp"
+                                        android:src="@drawable/avatarperfil"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:ignore="ContentDescription" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--Base Inferior Perfil-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="280dp"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                            <LinearLayout
+                                android:id="@+id/linearbaseimgs"
+                                android:layout_width="30dp"
+                                android:layout_height="165dp"
+                                android:layout_marginStart="50dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txttitulocpfperfil">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <!--Img Address-->
+                                    <ImageView
+                                        android:id="@+id/imgmaps"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="30dp"
+                                        android:src="@drawable/pontinhamaps"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:ignore="ContentDescription" />
+
+                                    <!--Img Phone-->
+                                    <ImageView
+                                        android:id="@+id/imgphone"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/phoneperfil"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/imgmaps"
+                                        tools:ignore="ContentDescription" />
+
+                                    <!--Img Email-->
+                                    <ImageView
+                                        android:id="@+id/imgemail"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/emailperfil"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/imgphone"
+                                        tools:ignore="ContentDescription" />
+
+                                    <!--Img Cargo-->
+                                    <ImageView
+                                        android:id="@+id/imgcoffe"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/coffeperfil"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/imgemail"
+                                        tools:ignore="ContentDescription" />
+
+                                    <!--Img TIme-->
+                                    <ImageView
+                                        android:id="@+id/imgtime"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/clockperfil"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/imgcoffe"
+                                        tools:ignore="ContentDescription" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <!--Text Base CPf-->
+                            <TextView
+                                android:id="@+id/txttitulocpfperfil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/cpfperfil"
+                                android:textAllCaps="true"
+                                android:textColor="#000"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/txtcpffuncperfilgerenciar"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                            <!--Text Cpf-->
+                            <TextView
+                                android:id="@+id/txtcpffuncperfilgerenciar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="40dp"
+                                android:text="@string/aguardandocpf"
+                                android:textColor="#000"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                            <!--Text Address-->
+                            <TextView
+                                android:id="@+id/txtendfuncperfilgerenciar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="30dp"
+                                android:text="@string/aguardandocpf"
+                                android:textColor="#AE000000"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toEndOf="@+id/linearbaseimgs"
+                                app:layout_constraintTop_toBottomOf="@+id/txtcpffuncperfilgerenciar"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                            <!--Text Phone-->
+                            <TextView
+                                android:id="@+id/txtphonefuncperfilgerenciar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/aguardandocpf"
+                                android:textColor="#AE000000"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toEndOf="@+id/linearbaseimgs"
+                                app:layout_constraintTop_toBottomOf="@+id/txtendfuncperfilgerenciar"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                            <!--Text Email-->
+                            <TextView
+                                android:id="@+id/txtemailfuncperfilgerenciar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/aguardandocpf"
+                                android:textColor="#AE000000"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toEndOf="@+id/linearbaseimgs"
+                                app:layout_constraintTop_toBottomOf="@+id/txtphonefuncperfilgerenciar"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                            <!--Text Cargo-->
+                            <TextView
+                                android:id="@+id/txtcargofuncperfilgerenciar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/aguardandocpf"
+                                android:textColor="#AE000000"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toEndOf="@+id/linearbaseimgs"
+                                app:layout_constraintTop_toBottomOf="@+id/txtemailfuncperfilgerenciar"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                            <!--Text Proxima Reunião-->
+                            <TextView
+                                android:id="@+id/txtproximareuniaoperfilgerenciar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="9dp"
+                                android:text="@string/aguardandocpf"
+                                android:textColor="#AE000000"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toEndOf="@+id/linearbaseimgs"
+                                app:layout_constraintTop_toBottomOf="@+id/txtcargofuncperfilgerenciar"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewiniciareditgerenciar"
+                    android:layout_width="198dp"
+                    android:layout_height="48dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="#fff"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardviewperfilusu">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="195dp"
+                            android:layout_height="45dp"
+                            app:cardBackgroundColor="#000"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/editarperfil"
+                                    android:textColor="#fff"
+                                    android:textSize="23sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Edit Perfil-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintbaseeditperfilgerenciar"
+                android:layout_width="match_parent"
+                android:padding="50dp"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!--Text Tittle Editar Perfil-->
+                        <TextView
+                            android:id="@+id/txttituloeditarperfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/editarperfil"
+                            android:textColor="#fff"
+                            android:textSize="30sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--Text edit cpf-->
+                        <TextView
+                            android:id="@+id/txttitulocpfeditperfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/cpf"
+                            android:textAllCaps="true"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttituloeditarperfil" />
+
+                        <!--Edit cpf-->
+                        <EditText
+                            android:id="@+id/editeditcpfperfilgerenciar"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:maxLength="14"
+                            android:inputType="number"
+                            android:background="@drawable/outlineedit"
+                            android:hint="@string/hinteditcpfgerenciar"
+                            android:textColorHint="#D5FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttitulocpfeditperfil"
+                            tools:ignore="Autofill,TextFields" />
+
+                        <!--Text edit Nome-->
+                        <TextView
+                            android:id="@+id/txttitulonomeeditperfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/nome"
+                            android:textAllCaps="true"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editeditcpfperfilgerenciar" />
+
+                        <!--Edit Nome-->
+                        <EditText
+                            android:id="@+id/editeditnomeperfilgerenciar"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:inputType="text"
+                            android:maxLength="100"
+                            android:background="@drawable/outlineedit"
+                            android:hint="@string/hinteditnomefuncgerenciar"
+                            android:textColorHint="#D5FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttitulonomeeditperfil"
+                            tools:ignore="Autofill,TextFields" />
+
+                        <!--Text edit Email-->
+                        <TextView
+                            android:id="@+id/txttituloemaileditperfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/emailedit"
+                            android:textAllCaps="true"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editeditnomeperfilgerenciar" />
+
+                        <!--Edit Email-->
+                        <EditText
+                            android:id="@+id/editeditemailperfilgerenciar"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:maxLength="50"
+                            android:inputType="textEmailAddress"
+                            android:background="@drawable/outlineedit"
+                            android:hint="@string/hinteditemailgerenciar"
+                            android:textColorHint="#D5FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttituloemaileditperfil"
+                            tools:ignore="Autofill,TextFields" />
+
+                        <!--Text edit Address-->
+                        <TextView
+                            android:id="@+id/txttituloenderecoeditperfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/enderecocadastro"
+                            android:textAllCaps="true"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editeditemailperfilgerenciar" />
+
+                        <!--Edit Address-->
+                        <EditText
+                            android:id="@+id/editeditenderecoperfilgerenciar"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:maxLength="50"
+                            android:inputType="text"
+                            android:background="@drawable/outlineedit"
+                            android:hint="@string/hinteditendgerenciar"
+                            android:textColorHint="#D5FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttituloenderecoeditperfil"
+                            tools:ignore="Autofill,TextFields" />
+
+                        <!--Text edit Telefone-->
+                        <TextView
+                            android:id="@+id/txttitulotelefoneeditperfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/tellcadastro"
+                            android:textAllCaps="true"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editeditenderecoperfilgerenciar" />
+
+                        <!--Edit Telefone-->
+                        <EditText
+                            android:id="@+id/editedittelefoneperfilgerenciar"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:maxLength="15"
+                            android:inputType="phone"
+                            android:background="@drawable/outlineedit"
+                            android:hint="@string/hintedittellgerenciar"
+                            android:textColorHint="#D5FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttitulotelefoneeditperfil"
+                            tools:ignore="Autofill,TextFields" />
+
+                        <!--Text edit Cargo-->
+                        <TextView
+                            android:id="@+id/txttitulocargoeditperfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/cargoedit"
+                            android:textAllCaps="true"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editedittelefoneperfilgerenciar" />
+
+                        <!--Edit Cargo-->
+                        <EditText
+                            android:id="@+id/editeditcargoperfilgerenciar"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:maxLength="50"
+                            android:inputType="text"
+                            android:background="@drawable/outlineedit"
+                            android:hint="@string/hinteditcargogerenciar"
+                            android:textColorHint="#D5FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttitulocargoeditperfil"
+                            tools:ignore="Autofill,TextFields" />
+
+                        <!--Text edit Proxima Reunião-->
+                        <TextView
+                            android:id="@+id/txttituloproximareuniaoeditperfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/proximareuniaoedit"
+                            android:textAllCaps="true"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editeditcargoperfilgerenciar" />
+
+                        <!--Edit Proxima Reunião-->
+                        <EditText
+                            android:id="@+id/editeditproximareuniaoperfilgerenciar"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:maxLength="15"
+                            android:inputType="datetime"
+                            android:background="@drawable/outlineedit"
+                            android:hint="@string/hintproximareuniao"
+                            android:textColorHint="#D5FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttituloproximareuniaoeditperfil"
+                            tools:ignore="Autofill,TextFields" />
+
+                        <!--Text edit Senha-->
+                        <TextView
+                            android:id="@+id/txttitulosenhaeditperfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/senha"
+                            android:textAllCaps="true"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editeditproximareuniaoperfilgerenciar" />
+
+                        <!--Edit Senha-->
+                        <EditText
+                            android:id="@+id/editeditsenhaperfilgerenciar"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:maxLength="15"
+                            android:inputType="text"
+                            android:background="@drawable/outlineedit"
+                            android:hint="@string/hintsenhaedit"
+                            android:textColorHint="#D5FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txttitulosenhaeditperfil"
+                            tools:ignore="Autofill,TextFields" />
+
+                        <!--CardView Salvar-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtnsalvareditperfilgerenciar"
+                            android:layout_width="198dp"
+                            android:layout_height="38dp"
+                            app:cardCornerRadius="20dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:cardBackgroundColor="#fff"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editeditsenhaperfilgerenciar">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="195dp"
+                                    android:layout_height="35dp"
+                                    app:cardCornerRadius="20dp"
+                                    app:cardBackgroundColor="#000"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Text Salvar-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/salvar"
+                                            android:textAlignment="center"
+                                            android:textColor="#fff"
+                                            android:textSize="20sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            tools:ignore="TooDeepLayout" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--CardView Voltar Ao Card-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewbtnvoltarcardperfilgerenciar"
+                            android:layout_width="198dp"
+                            android:layout_height="38dp"
+                            app:cardBackgroundColor="#fff"
+                            app:cardCornerRadius="20dp"
+                            android:layout_marginTop="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardviewbtnsalvareditperfilgerenciar">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="195dp"
+                                    android:layout_height="35dp"
+                                    app:cardBackgroundColor="#000"
+                                    app:cardCornerRadius="20dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <!--Text Salvar-->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/voltaraocracha"
+                                            android:textAlignment="center"
+                                            android:textColor="#fff"
+                                            android:textSize="18sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            tools:ignore="TooDeepLayout" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
