@@ -8,6 +8,7 @@ Para rodar o app, será necessário a instalação do Android Studio em sua máq
 
 *O app utiliza o banco de dados SQLite, portanto, as informações ficam localizadas apenas em seu dispositivo.*
 
+## Como user
 <h2>Após isso, irá para a primeira tela, é a tela de splash.</h2>
 <img src="https://cdn.discordapp.com/attachments/756546249901211749/820017653199667216/Screenshot_20210312-163705_System_Strength.png" min-width="250px" max-width="300px" width="300px">
 
