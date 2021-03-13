@@ -1,3 +1,4 @@
+<img src="https://cdn.discordapp.com/attachments/756546249901211749/817804507941044254/systemstrength.png"  min-width="250px" max-width="250px" width="250px" align="right">
 # Projeto Mobile.
 
 ## O Aplicativo System Strength foi desenvolvido para os funcionários da própria System Strengh, tendo em vista o melhor rendimento de seus funcionários, possibilitando uma fácil organização para sua agenda e gerenciamento de clientes.
@@ -30,7 +31,3 @@ Para rodar o app, será necessário a instalação do Android Studio em sua máq
 
 <h2>Clicando em “Agenda”, você consegue cadastrar, editar e excluir um agendamento, porém, é bom lembrar que é necessário possuir um cliente cadastrado em seu app para a utilização dessa tela.</h2>
 <img src="https://cdn.discordapp.com/attachments/756546249901211749/820034254422671381/unknown.png" min-width="250px" max-width="250px" width="250px">
-
-
-<br/>
-<img src="https://cdn.discordapp.com/attachments/756546249901211749/817804507941044254/systemstrength.png"  min-width="250px" max-width="250px" width="250px">
