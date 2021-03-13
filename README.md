@@ -1,1 +1,1 @@
-# System-Strength
+Olá, é com muito orgulho que nós da Systrem Strength apresentamos nosso portifólio, para uma melhor experiência, recomendamos acessar nossa pagina pensada para uma melhor apresentação de nosso portfólio, basta clicar [aqui](), em nossa pagina web, temos um menu lateral que o possibilita navegar por todos os nosso projetos feitos até então.  Ao entrar em cada categoria, será apresentado à você, cards que o redirecionará para o arquivo/projeto.
