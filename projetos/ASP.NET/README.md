@@ -3,9 +3,13 @@
 <h3>O sistema da Palace Petz foi desenvolvido com o objetivo de ajudar os funcionários da Palace, para que os mesmos possam ter um controle de seus produtos, clientes e vendas, sempre é bom ressaltar que o Palace Petz é um sistema fictício que faz parte de um projeto da empresa System Strength que também é uma empresa fictícia ambas desenvolvidas pelo grupo 4, da ETEC no curso de Desenvolvimento de Sistemas</h3>
 
 ## Setup
-Para acessar o sistema é necessário a instalação do Visual Studio e baixar o repositório do sistema, terá que ir à web config do projeto palace petz e dentro da web config procurar o connection string, depois trocar o passawoard para a senha que você utiliza em seu MySql worckbench.<br/>
-Observação: ir à pasta do projeto mvc lá dentro tem um arquivo “Banco_PalcePetz.sql” e executar o script.
+Para acessar o sistema é necessário a instalação do Visual Studio e baixar o repositório do sistema, terá que ir à web config do projeto palace petz demostrado na imagem abaixo</h2>
+<img src="https://cdn.discordapp.com/attachments/756546249901211749/820374364914450522/unknown.png">
+
+<h2>logo após dentro da web config procurar o connection string, depois trocar o passawoard para a senha que você utiliza em seu MySql worckbench.<br/>
+<img src="https://cdn.discordapp.com/attachments/756546249901211749/820374839059284018/unknown.png">
 </h2>
+Observação: ir à pasta do projeto mvc lá dentro tem um arquivo “Banco_PalcePetz.sql” e executar o script.
 
 <h3>Depois que você trocou a senha do MySql para a sua senha. Você poderá rodar o sistema, e irá te encaminhar para a tela de login para funcionário, você poderá acessar nosso sistema preenchendo os seguintes campos do login:</h3>
 <p>Usuário = FuncPP2020<br/> 
