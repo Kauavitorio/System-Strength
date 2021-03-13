@@ -1,4 +1,4 @@
-<img src="https://cdn.discordapp.com/attachments/756546249901211749/817804507941044254/systemstrength.png"  min-width="250px" max-width="250px" width="250px" align="right">
+<img src="https://cdn.discordapp.com/attachments/756546249901211749/817804507941044254/systemstrength.png"  min-width="200px" max-width="200px" width="200px" align="right">
 # Projeto Mobile.
 
 ## O Aplicativo System Strength foi desenvolvido para os funcionários da própria System Strengh, tendo em vista o melhor rendimento de seus funcionários, possibilitando uma fácil organização para sua agenda e gerenciamento de clientes.
