@@ -3,7 +3,7 @@
 <h3>O sistema da Palace Petz foi desenvolvido com o objetivo de ajudar os funcionários da Palace, para que os mesmos possam ter um controle de seus produtos, clientes e vendas, sempre é bom ressaltar que o Palace Petz é um sistema fictício que faz parte de um projeto da empresa System Strength que também é uma empresa fictícia ambas desenvolvidas pelo grupo 4, da ETEC no curso de Desenvolvimento de Sistemas</h3>
 
 ## Setup
-Para acessar o sistema é necessário a instalação do Visual Studio e baixar o repositório do sistema, terá que ir à web config do projeto palace petz demostrado na imagem abaixo</h2>
+Para acessar o sistema é necessário a instalação do Visual Studio e baixar o repositório do sistema, terá que ir à web config do projeto palace petz demostrado na imagem abaixo</h2><br/>
 <img src="https://cdn.discordapp.com/attachments/756546249901211749/820374364914450522/unknown.png">
 
 <h2>logo após dentro da web config procurar o connection string, depois trocar o passawoard para a senha que você utiliza em seu MySql worckbench.<br/>
