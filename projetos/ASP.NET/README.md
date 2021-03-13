@@ -1,6 +1,9 @@
 <img src="https://cdn.discordapp.com/attachments/756546249901211749/817804507941044254/systemstrength.png"  min-width="200px" max-width="200px" width="200px" align="right">
 # ASP.NET
-## Para acessar o sistema é necessário a instalação do Visual Studio e baixar o repositório do sistema, terá que ir à web config do projeto palace petz e dentro da web config procurar o connection string, depois trocar o passawoard para a senha que você utiliza em seu MySql worckbench.<br/>
+<h1>O sistema da Palace Petz foi desenvolvido com o objetivo de ajudar os funcionários da Palace, para que os mesmos possam ter um controle de seus produtos, clientes e vendas, sempre é bom ressaltar que o Palace Petz é um sistema fictício que faz parte de um projeto da empresa System Strength que também é uma empresa fictícia ambas desenvolvidas pelo grupo 4, da ETEC no curso de Desenvolvimento de Sistemas</h1>
+
+## Setup
+Para acessar o sistema é necessário a instalação do Visual Studio e baixar o repositório do sistema, terá que ir à web config do projeto palace petz e dentro da web config procurar o connection string, depois trocar o passawoard para a senha que você utiliza em seu MySql worckbench.<br/>
 Observação: ir à pasta do projeto mvc lá dentro tem um arquivo “Banco_PalcePetz.sql” e executar o script.
 </h2>
 
